@@ -20,4 +20,16 @@ Import-Module BitsTransfer
 Start-BitsTransfer -Source $url -Destination $output
 ```
 
+## Save output to file
+
+```powershell
+Command | Out-File -FilePath file.txt
+```
+Ammed a file with the `-Amend` flag
+
+```powershell
+Command | Out-File -FilePath -Amend file.txt
+```
+
+
 
