@@ -27,4 +27,17 @@ Here’s a brief explanation of how this vim “delete blank lines” command wo
 
 4.  Press <kbd>x</kbd> to delete them all at once
 
----
+## Writing to file with sudo
+
+```
+:w !sudo tee %
+```
+
+Add this to `.config/nvim/init.vim`:
+
+```
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+```
+
+
