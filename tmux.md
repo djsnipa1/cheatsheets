@@ -36,7 +36,7 @@ In tmux, hit the prefix `ctrl+b` (my modified prefix is ctrl+a) and then:
     s  list sessions
     $  name session
 
-## <a name="WindowsTabs"></a>Windows (tabs)
+## Windows (tabs)
 
     c  create window
     w  list windows
@@ -46,7 +46,7 @@ In tmux, hit the prefix `ctrl+b` (my modified prefix is ctrl+a) and then:
     ,  name window
     &  kill window
 
-## <a name="PanesSplits"></a>Panes (splits) 
+## Panes (splits) 
 
     %  vertical split
     "  horizontal split
@@ -87,8 +87,9 @@ You can also resize panes if you don’t like the layout defaults. I personally 
     PREFIX : resize-pane -R 20 (Resizes the current pane right by 20 cells)
     PREFIX : resize-pane -t 2 20 (Resizes the pane with the id of 2 down by 20 cells)
     PREFIX : resize-pane -t -L 20 (Resizes the pane with the id of 2 left by 20 cells)
-    
-    
+
+
+​    
 ## Copy mode:
 
 Pressing PREFIX [ places us in Copy mode. We can then use our movement keys to move our cursor around the screen. By default, the arrow keys work. we set our configuration file to use Vim keys for moving between windows and resizing panes so we wouldn’t have to take our hands off the home row. tmux has a vi mode for working with the buffer as well. To enable it, add this line to .tmux.conf:
@@ -147,17 +148,17 @@ For example, we can use "w" to jump to the next word and "b" to jump back one wo
     * set -g mouse-select-pane off
     * set -g mouse-resize-pane off
     * set -g mouse-select-window off
-
+    
     # Set the default terminal mode to 256color mode
     set -g default-terminal "screen-256color"
-
+    
     # enable activity alerts
     setw -g monitor-activity on
     set -g visual-activity on
-
+    
     # Center the window list
     set -g status-justify centre
-
+    
     # Maximize and restore a pane
     unbind Up bind Up new-window -d -n tmp \; swap-pane -s tmp.1 \; select-window -t tmp
     unbind Down
@@ -178,7 +179,7 @@ For example, we can use "w" to jump to the next word and "b" to jump back one wo
 * 1411143833002 - [Added Sync Panes](#syncPanes)
 * 1414276652677 - [Added Kill all tmux sessions ](#killAllSessions)
 * 1438585211173 - [corrected create and add next and previus thanks to @justinjhendrick](#WindowsTabs)
- 
+
 ## Request an Update:
 
 We Noticed that our Cheatsheet is growing and people are coloberating to add new tips and tricks, so please tweet to me what would you like to add and let's make it better!

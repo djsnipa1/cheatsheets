@@ -56,3 +56,17 @@ chmod +x rebol
 
 ---
 
+#  Command Line Notes
+
+_September 3,2019_
+
+[Courses Dashboard | Wes Bos](https://courses.wesbos.com/account/access/5cdc7ba285f96c03c1e44b42/view/195975829)
+
+`take` - makes an new directory and puts you in it
+
+**History**
+Example `git ` and <kbd>⇧</kbd> goes through all `git ` command history 
+
+**zsh**
+
+<kbd>CTRL</kbd> + <kbd>R</kbd> lets you search through recent commands

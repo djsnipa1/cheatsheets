@@ -1,5 +1,56 @@
 # VIM
 
+## A few helpful shortcuts related to executing things in the shell:
+
+*   `:!` By itself, runs the last external command (from your shell history)
+*   `:!!` Repeats the last commands
+*   `:silent !{cmd}` Eliminates the need to hit enter after the command is done
+*   `:r !{cmd}` Puts the output of $cmd into the current buffer.
+*   `:r !{cmd} > filename` writes the output to a new file
+
+## Using tabs in Vim
+
+* Create a new tab with `:tabnew` 
+* Open file in new tab `:tabnew filename`
+* Open files in tabs from the command line
+
+```shell
+vim -p file1 file2 file3
+```
+* Search for open file in tabs with `:tabf filename`
+* Search tabs with auto completion with `:tabn filename`
+* Navigate tabs: Next = `:tabn` Previous = `:tabp` First tab = `:tabfirst` Last Tab = `:tablast`
+* See list of open tabs with `:tabs`
+* Move tab to a different position with `:tabm <ntab number>` _<tab number> is 0-whatever number tabs_ 
+* Running commands in tabs:
+
+> Let’s say you’re editing six or seven files in Vim and realize that you need to replace a variable name with a new one. Using the :tabdo command, you can run a search and replace through all of the tabs at once rather than changing each file individually. For instance, if you want to replace foo with bar, you’d run this:
+
+```
+:tabdo %s/foo/bar/g
+```
+
+That will run through each open tab and run the search and replace command (%s/foo/bar/g) in each one.
+
+## Adding character before selected block of text
+
+*   Press <kbd>Esc</kbd> to enter 'command mode'
+*   Use <kbd>Ctrl</kbd> + <kbd>v</kbd> to enter visual block mode
+*   Move Up/Down to select the columns of text in the lines you want to comment.
+*   Then hit <kbd>Shift</kbd> + <kbd>i</kbd> and type the text you want to insert.
+*   Then hit <kbd>Esc</kbd>, wait 1 second and the inserted text will appear on every line.
+
+## Saving output to a file
+
+Typically the output of the above commands will span several pages. You can use the following set of commands to redirect the output to the vim_maps.txt file:
+
+```vim
+:redir! > vim_maps.txt
+:map
+:map!
+:redir END
+```
+
 ## A vim “delete blank lines” command
 
 To delete *blank lines* in vim (empty lines), use this vim command in “last line mode”:
