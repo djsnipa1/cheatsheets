@@ -28,7 +28,24 @@ telnet towel.blinkenlights.n
 
 ---
 
-## For tar.gz
+## Umcompress & Compress
+-------------------------
+
+### 7zip
+
+#### Unzip zip file
+
+```shell
+7z.exe e *.zip
+```
+
+#### List files in archive
+
+```shell
+7z.exe l -r filename.zip
+```
+
+### For tar.gz
 
 To unpack a tar.gz file, you can use the **tar** command from the shell. Here's an example:
 
@@ -40,7 +57,7 @@ The result will be a new directory containing the files.
 
 (Also, on many systems, when you download the tar.gz from a web browser, an unpacker will open, and you can just use that.)
 
-## For just .gz (.gzip)
+### For just .gz (.gzip)
 
 In some cases the file is just a gzip format, not tar. Then you can use:
 
