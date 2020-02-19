@@ -4,7 +4,7 @@
 cat history.json | jq '.items[0]'
 ```
 
-```json
+```yaml
 {
   "track": {
     "album": {
@@ -31,7 +31,7 @@ cat history.json | jq '.items[0]'
 cat history.json | jq '.items[0] .track'
 ```
 
-```json
+```yaml
 
 {
   "album": {
@@ -209,7 +209,7 @@ cat history.json | jq '.items[0] .track.name'
 cat history.json | jq '.items[] .track.name'
 ```
 
-```json
+```yaml
 "Vortex"
 "Our World"
 "Our World"
