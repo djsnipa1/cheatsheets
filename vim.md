@@ -132,4 +132,14 @@ Add this to `.config/nvim/init.vim`:
 cmap w!! w !sudo tee > /dev/null %
 ```
 
+## Copying whole document to clipboard
+
+> On Windows & OS X there is no difference between `+` and `*`, since these systems only have a single clipboard, and both registers refer to the same thing (it doesn't matter which one you use).
+
+You can use these registers as any register. For example, using the PRIMARY clipboard `*` with the `y` and `p` commands:
+
+*   `"*yy`
+*   `"*p`
+
+
 
