@@ -4,7 +4,12 @@ Jupyter Notebooks
 Installing Modules 
 ------------------
 
-`!{sys.executable} -m pip install scipy`
+```python
+# Install a pip package in the current Jupyter kernel
+import sys
+!{sys.executable} -m pip install scipy
+```
+
 the last word is the name of the module to install
 
 Jupyter Notebooks
