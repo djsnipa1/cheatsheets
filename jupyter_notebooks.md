@@ -1,5 +1,11 @@
-Python Programming
+Jupyter Notebooks
 ==================
+
+Installing Modules 
+------------------
+
+`!{sys.executable} -m pip install scipy`
+the last word is the name of the module to install
 
 Jupyter Notebooks
 -----------------
