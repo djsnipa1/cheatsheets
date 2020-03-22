@@ -1,8 +1,20 @@
 # Command Line
 
+## Encoding and Decoding
+
+**Encode:**
+
+```bash
+openssl enc -aes-256-cbc -salt -pbkdf2 -in file .txt -out file.enc
+```
+
+**Decode:** add `-d` to the above command
+
+---
+
 ## Adding to $PATH
 
-Simply add `**/place/with/the/file**` to the `**$PATH**` variable with the following command:
+Simply add **`/place/with/the/file`** to the **`$PATH`** variable with the following command:
 
 ```bash
 export PATH=$PATH:/place/with/the/file
