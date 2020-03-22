@@ -1,14 +1,23 @@
 # Command Line
 
-## Encoding and Decoding
+## Encrypt and Decrypt
 
-**Encode:**
-
+**Encrypt:**
+**EASIEST OPTION**
+```bash
+gpg -c file.txt
+```
+Alternative method:
 ```bash
 openssl enc -aes-256-cbc -salt -pbkdf2 -in file .txt -out file.enc
 ```
 
-**Decode:** add `-d` to the above command
+**Decrypt:**
+```bash
+gpg -d file.gpg
+```
+Alternative Method:
+add `-d` to the above command
 
 ---
 
