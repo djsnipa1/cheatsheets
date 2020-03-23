@@ -12,8 +12,29 @@ import sys
 
 the last word is the name of the module to install
 
+Capturing Output to File
+------------------------
+You can use `%%capture` Jupyter notebook's magic command to catch output of cell and then paste it to your text file with
+
+```python
+with open('output.txt', 'w') as out:
+   out.write(cap.stdout)
+```
+
+if you want to cell code to specific file for example.txt you can use magic function `%%writefile`
+
+```python
+%%writefile example.txt
+ab = 'This is code'
+a = 5
+print(a+ 2)
+```
+
+Also if you want to append to file you must use `-a` parameter
+
+
 Jupyter Notebooks
------------------
+=================
 
 -   [How\_to\_get\_started\_coding\_in\_Python?](https://nbviewer.jupyter.org/github/Tanu-N-Prabhu/Python/blob/master/How_to_get_started_coding_in_Python%3F.ipynb),
     this notebook explains how to become a good python programmer, by

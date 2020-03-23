@@ -11,17 +11,17 @@ Rule of thumb for correct permissions:
 *   Dynamic Content: 700
 
 **TIP:**
->Linux permissions can be represented with numbers, letters, or words. They also include an entry for Owner, Group, and Everyone.
+> Linux permissions can be represented with numbers, letters, or words. They also include an entry for Owner, Group, and Everyone.
 
-| code | `ls`  |
-|--------|-------|
+|  code   |     `ls`     |
+|---------|--------------|
 | **755** | `drwxr-xr-x` |
-|  **644** | `-rw-r--r--` |
+| **644** | `-rw-r--r--` |
 | **700** | `-rwx------` |
 
-*   **755** stands for Owner: read, write, execute; Group: read, execute; Everyone: read, execute
-*   **644** stands for Owner: read, write; Group: read, Everyone: read
-*   **700** stands for Owner: read, write, execute; Group: (none); Everyone: (none)
+* **755** stands for Owner: read, write, execute; Group: read, execute; Everyone: read, execute
+* **644** stands for Owner: read, write; Group: read, Everyone: read
+* **700** stands for Owner: read, write, execute; Group: (none); Everyone: (none)
 
 ### Ownership
 
