@@ -1,5 +1,9 @@
 # Writeguard
 
+## I think this is what fixed it
+
+[Solving 403 Forbidden on Port 443 (HTTPS) for Apache 2.4](https://medium.com/@xvista/solving-403-forbidden-on-port-443-https-for-apache-2-4-40bab9296315)
+
 ## Mediatemple Info
 
 ### Permissions
