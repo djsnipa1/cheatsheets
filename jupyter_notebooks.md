@@ -1,7 +1,21 @@
 Jupyter Notebooks
 ==================
 
-Installing Modules 
+Adding kernel for Hydrogen in Atom
+----------------------------------
+1. Install the ipykernel in your virtual environment:
+`pipenv install ipykernel`
+
+2. Start shell with:
+`pipenv shell`
+
+3. Set name so Atom Hydrogen can recognize:
+`pipenv run python -m ipykernel install --user --name=name-of-kernel`
+
+4. Start Atom (from within pipenv shell) and when you run code (control-enter), Atom should list python kernels to use (including `name-of-kernel`)
+
+
+Installing Modules
 ------------------
 
 ```python
