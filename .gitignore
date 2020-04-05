@@ -38,3 +38,6 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/windows
 n
 /_PROJECT.DAT
+
+# VSCODE Files
+*.vscode
