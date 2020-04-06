@@ -1,8 +1,20 @@
 # Writeguard
 
-## I think this is what fixed it
+## Issues as of 4/1/2020
 
-[Solving 403 Forbidden on Port 443 (HTTPS) for Apache 2.4](https://medium.com/@xvista/solving-403-forbidden-on-port-443-https-for-apache-2-4-40bab9296315)
+## **Krista said:**
+
+> SQL Syntax
+
+## **Customer said:**
+
+> Add to cart
+
+> 1064 You have an error in your SQL Syntax check
+
+> **_Manual Deposit Ticket DT15-C_**
+
+- - -
 
 ## Mediatemple Info
 
@@ -84,5 +96,11 @@ find . -name *.png | xargs chmod 644
 find . -name *.js | xargs chmod 644
 chmod 644 ./public/fonts/*
 ```
+
+- - -
+
+## I think this is what fixed the problem when we switched to DV server
+
+[Solving 403 Forbidden on Port 443 (HTTPS) for Apache 2.4](https://medium.com/@xvista/solving-403-forbidden-on-port-443-https-for-apache-2-4-40bab9296315)
 
 
