@@ -63,3 +63,21 @@ git add  .
  |
 
 Then, commit your changes and your files that would have been ignored if you’d had the right `.gitignore` in place from the start should no longer be tracked. Yay! If you’re interested, or if this approach doesn’t work for you, there are a few variations on how you might achieve the same result listed in [this StackOverflow thread](http://stackoverflow.com/questions/1274057/how-to-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore).
+
+
+## Cloning and Using Pull Requests
+
+```
+git fetch origin pull/34/head:pull_34
+git checkout pull_34
+```
+
+What that does is creates the **branch 34** named **pull_34**. Now you can merge it:
+
+```
+git checkout master
+git merge pull_34
+git branch -d pull_34
+```
+
+
