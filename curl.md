@@ -163,7 +163,7 @@ curl --verbose -I https://flaviocopes.com/
 
 ```
 
-```
+```text
 *   Trying 178.128.202.129...
 * TCP_NODELAY set
 * Connected to flaviocopes.com (178.128.202.129) port 443 (#0)
@@ -192,11 +192,17 @@ Date: Mon, 30 Jul 2018 08:08:41 GMT
 
 When inspecting any network request using the [Chrome Developer Tools](https://flaviocopes.com/browser-dev-tools/), you have the option to copy that request to a curl request:
 
-![](https://flaviocopes.com/http-curl/copy-as-curl-in-devtools.png)
+![copy-as-curl-in-devtools](https://flaviocopes.com/http-curl/copy-as-curl-in-devtools.png)
 
 ```bash
-curl 'https://github.com/curl/curl' -H 'Connection: keep-alive' -H 'Pragma: no-cache' -H 'Cache-Control: no-cache' -H 'Upgrade-Insecure-Requests: 1' -H 'DNT: 1' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8' -H 'Referer: https://www.google.it/' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9,it;q=0.8' -H 'Cookie: _octo=GH1.1.933116459.1507545550; _ga=GA1.2.643383860.1507545550; tz=Europe%2FRome; user_session=XXXXX; __Host-user_session_same_site=YYYYYY; dotcom_user=flaviocopes; logged_in=yes; has_recent_activity=1; _gh_sess=ZZZZZZ' --compressed
-
+curl 'https://github.com/curl/curl' -H 'Connection: keep-alive' -H 'Pragma: no-cache' -H 'Cache-Control: no-cache' \
+-H 'Upgrade-Insecure-Requests: 1' -H 'DNT: 1' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) | \
+AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36' -H 'Accept: \
+text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8' -H 'Referer: https://www.google.it/' \
+-H 'Accept-Encoding: gzip, deflate, br' -H 'Accept-Language: en-US,en;q=0.9,it;q=0.8' -H |
+'Cookie: _octo=GH1.1.933116459.1507545550; _ga=GA1.2.643383860.1507545550; tz=Europe%2FRome; user_session=XXXXX; \
+__Host-user_session_same_site=YYYYYY; dotcom_user=flaviocopes; logged_in=yes; has_recent_activity=1; _gh_sess=ZZZZZZ' \
+--compressed
 ```
 
 ---
@@ -213,7 +219,14 @@ curl 'https://github.com/curl/curl' -H 'Connection: keep-alive' -H 'Pragma: no-c
 
 [follow @flaviocopes](https://twitter.com/flaviocopes)
 
-[CLI](https://flaviocopes.com/tags/cli/) [CSS](https://flaviocopes.com/tags/css/) [Database](https://flaviocopes.com/tags/database/) [DevTools](https://flaviocopes.com/tags/devtools/) [Express](https://flaviocopes.com/tags/express/) [Git](https://flaviocopes.com/tags/git/) [Go](https://flaviocopes.com/tags/go/) [GraphQL](https://flaviocopes.com/tags/graphql/) [HTML](https://flaviocopes.com/tags/html/) [JavaScript](https://flaviocopes.com/tags/js/) [Lab](https://flaviocopes.com/tags/lab/) [Network](https://flaviocopes.com/tags/network/) [Next.js](https://flaviocopes.com/tags/next/) [Node.js](https://flaviocopes.com/tags/node/) [React](https://flaviocopes.com/tags/react/) [Services](https://flaviocopes.com/tags/services/) [Svelte](https://flaviocopes.com/tags/svelte/) [Vue.js](https://flaviocopes.com/tags/vue/) [Web Platform](https://flaviocopes.com/tags/browser/)
+[CLI](https://flaviocopes.com/tags/cli/) [CSS](https://flaviocopes.com/tags/css/) [Database](https://flaviocopes.com/tags/database/) 
+[DevTools](https://flaviocopes.com/tags/devtools/) [Express](https://flaviocopes.com/tags/express/)
+[Git](https://flaviocopes.com/tags/git/) [Go](https://flaviocopes.com/tags/go/) [GraphQL](https://flaviocopes.com/tags/graphql/) 
+[HTML](https://flaviocopes.com/tags/html/) [JavaScript](https://flaviocopes.com/tags/js/) [Lab](https://flaviocopes.com/tags/lab/) 
+[Network](https://flaviocopes.com/tags/network/) [Next.js](https://flaviocopes.com/tags/next/) 
+[Node.js](https://flaviocopes.com/tags/node/) [React](https://flaviocopes.com/tags/react/) 
+[Services](https://flaviocopes.com/tags/services/) [Svelte](https://flaviocopes.com/tags/svelte/) 
+[Vue.js](https://flaviocopes.com/tags/vue/) [Web Platform](https://flaviocopes.com/tags/browser/)
 
 © 2019 Flavio Copes
 

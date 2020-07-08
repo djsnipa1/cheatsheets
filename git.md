@@ -6,7 +6,7 @@ I had an issue where hundreds of line endings were modified by some program and 
 
 I was able to fix this problem by adding all files to index and then resetting the index.
 
-```
+```shell
 git add -A
 
 git reset
@@ -30,7 +30,10 @@ git rm  \-\-cached  < filename\>
 
  |
 
-The above command is for a specific file. It will take effect with your next commit. It’s a good idea for you to commit any pending changes you have before you start this process. If you have many files and/or folders (for instance, your /bin and /obj folders in a .NET project) that you need to clean up from your repository, you can use the following commands to remove them from the index (cache):
+The above command is for a specific file. It will take effect with your next commit. It’s a good idea for you to commit
+any pending changes you have before you start this process. If you have many files and/or folders (for instance, your
+/bin and /obj folders in a .NET project) that you need to clean up from your repository, you can use the following commands 
+to remove them from the index (cache):
 
 PowerShell
 
