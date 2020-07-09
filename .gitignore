@@ -1,4 +1,6 @@
 
+# node_modules
+node_modules/
 
 mdwiki/**
 mdwiki.html
@@ -41,3 +43,6 @@ n
 
 # VSCODE Files
 *.vscode
+
+birthday.md
+index.html

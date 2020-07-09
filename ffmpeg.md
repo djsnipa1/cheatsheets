@@ -39,4 +39,4 @@ ffmpeg -i input.wav -vn -ar 44100 -ac 2 -b:a 192k output.mp3
     demuxers and is mapped to the corresponding demuxer options. So used
     here to make sure it is stereo (2 channels)
 -   -b:a - Converts the audio bitrate to be exact 192kbit per second
-- 
+ 
