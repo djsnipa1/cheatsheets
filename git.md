@@ -65,7 +65,10 @@ git add  .
 
  |
 
-Then, commit your changes and your files that would have been ignored if you’d had the right `.gitignore` in place from the start should no longer be tracked. Yay! If you’re interested, or if this approach doesn’t work for you, there are a few variations on how you might achieve the same result listed in [this StackOverflow thread](http://stackoverflow.com/questions/1274057/how-to-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore).
+Then, commit your changes and your files that would have been ignored if you’d had the right `.gitignore` in place from 
+the start should no longer be tracked. Yay! If you’re interested, or if this approach doesn’t work for you, there are a
+few variations on how you might achieve the same result listed in 
+[this StackOverflow thread](http://stackoverflow.com/questions/1274057/how-to-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore).
 
 
 ## Cloning and Using Pull Requests
@@ -93,8 +96,15 @@ git diff master branch_number
 
 For when you forget to make an additional change and you've already committed 
 
-```bash
+```console
 git commit --amend --no-edit
 ```
 
+```html
+<p class="chad">This is a sample test</p>
+```
 
+```bash
+foo@bar:~$ whoami
+foo
+```
