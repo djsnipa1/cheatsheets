@@ -1,5 +1,11 @@
 # VIM
 
+## Yank entire file to clipboard
+
+```vim
+:%y+
+```
+
 ## vim-markdown 
 
 ## Mappings

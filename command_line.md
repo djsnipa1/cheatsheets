@@ -1,5 +1,13 @@
 # Command Line
 
+## Find text in a file
+
+```shell
+find . -type f -exec grep "example" '{}' \; -print
+```
+
+`f` = file
+
 ## Encrypt and Decrypt
 
 **Encrypt:**

@@ -41,3 +41,15 @@ n
 
 # VSCODE Files
 *.vscode
+
+.sync/*
+
+.me_configs.data
+
+.z_sync_configs.data
+
+sync_changes.log
+
+sync_hook.script
+
+**/.Archive

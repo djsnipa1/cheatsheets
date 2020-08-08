@@ -30,9 +30,37 @@ Ammed a file with the `-Amend` flag
 ```powershell
 Command | Out-File -FilePath -Amend file.txt
 ```
+## Write a Powershell Script
 
+Simple. For example...
 
-### <img width="650" height="325" src=":/7007c20e30a549db8efe7b9eb3cb7431"/>
+Open a Windows PowerShell window and type:
+
+```shell
+nvim $profile
+```
+
+Then create a function, such as:
+
+```powershell
+function goSomewhereThenOpenGoogleThenDeleteSomething {
+    cd C:\Users\
+    Start-Process -FilePath "http://www.google.com"
+    rm fileName.txt
+}
+```
+
+Then type this under the function name:
+
+```powershell
+Set-Alias google goSomewhereThenOpenGoogleThenDeleteSomething
+```
+
+Now you can type the word "google" into Windows PowerShell and have it execute the code within your function!
+
+---
+
+> Not quite sure what I pasted below this line but someday I'll check it out.
 
 ### PowerShell’s Path Environmental Variable
 

@@ -1,6 +1,35 @@
 FFMPEG
 ======
 
+Convert Image Sequence to Video
+-------------------------------
+
+#### Sequential
+
+In this example the input images are sequentially named img001.png, img002.png, img003.png, etc.
+
+```bash
+ffmpeg -framerate 24 -i img%03d.png output.mp4
+```
+- When outputting H.264, adding `-vf format=yuv420p or -pix\_fmt yuv420p` will ensure compatibility so crappy players can decode the video. See the [colorspace and chroma-subsampling](https://trac.ffmpeg.org/wiki/Slideshow#Colorspaceconversionandchromasub-sampling) for more info.
+
+- If \-framerate option is omitted the default will input and output 25 frames per second. See [Frame rates](https://trac.ffmpeg.org/wiki/Slideshow#Framerates) for more info.
+
+#### Starting with a specific image
+
+For example if you want to start with img126.png then use the `-start_number` option:
+
+```bash
+ffmpeg -start_number 126 -i img%03d.png -pix_fmt yuv420p out.mp4
+```
+
+#### Pipe
+
+You can use `cat` or other tools to pipe to ffmpeg:
+
+```bash
+cat *.png | ffmpeg -f image2pipe -i - output.mkv
+```
 Convert .mov to .mp4
 --------------------
 
@@ -39,4 +68,3 @@ ffmpeg -i input.wav -vn -ar 44100 -ac 2 -b:a 192k output.mp3
     demuxers and is mapped to the corresponding demuxer options. So used
     here to make sure it is stereo (2 channels)
 -   -b:a - Converts the audio bitrate to be exact 192kbit per second
-- 
