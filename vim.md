@@ -147,5 +147,11 @@ You can use these registers as any register. For example, using the PRIMARY clip
 *   `"*yy`
 *   `"*p`
 
+## Pretty Print JSON
 
+When working with JSON files, you will generally have a big mess of data that needs to be human readable. **Here's how:**
+
+Type the following into the vim command line:
+
+`:%!python -m json.tool`
 

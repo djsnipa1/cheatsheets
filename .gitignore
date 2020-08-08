@@ -1,4 +1,6 @@
 
+# node_modules
+node_modules/
 
 mdwiki/**
 mdwiki.html
@@ -41,15 +43,5 @@ n
 
 # VSCODE Files
 *.vscode
-
-.sync/*
-
-.me_configs.data
-
-.z_sync_configs.data
-
-sync_changes.log
-
-sync_hook.script
-
-**/.Archive
+birthday.md
+index.html

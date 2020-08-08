@@ -1,10 +1,10 @@
+# Pastery
+
 Pastery includes a very simple API that you can use for integration with editors and other programs.
 
 ## Creating a paste
 
-### API Description
-
-```
+```shell
 POST https://www.pastery.net/api/paste/
     ?api_key=<api_key>
     &duration=<duration>
@@ -27,14 +27,14 @@ Parameters:
 
 Here's how you can upload a paste from a file called `data.txt` using `curl`:
 
-```
+```shell
 $ curl -X POST https://www.pastery.net/api/paste/?title=Sample+data&api_key=mykey --data-binary @data.txt
 {"url": "https://www.pastery.net/yfbfgg/", "duration": 1440, "title": "Sample data", "language": "python"}
 ```
 
 or:
 
-```
+```shell
 $ curl https://www.pastery.net/api/paste/ -F file=@data.txt
 {"url": "https://www.pastery.net/yfbfgg/", "duration": 1440, "title": "Sample data", "language": "python"}
 ```
@@ -42,9 +42,7 @@ $ curl https://www.pastery.net/api/paste/ -F file=@data.txt
 
 ## Retrieving your pastes
 
-### API Description
-
-```
+```shell
 GET https://www.pastery.net/api/paste/
     ?api_key=<api_key>
 ```
@@ -53,11 +51,11 @@ Parameters:
 
 * **api_key** [optional]: The API key of the user whom the paste will belong to. This may become mandatory at some point, so it'd be best to pass one in any case. You can get this from your [account page](https://www.pastery.net/account/).
 
-### Command-line example
+**Command-line example**
 
 Here's how you can get a list of all your pastes using `curl`:
 
-```
+```shell
 $ curl https://www.pastery.net/api/paste/?api_key=mykey
 {
     "pastes": [
@@ -84,7 +82,7 @@ $ curl https://www.pastery.net/api/paste/?api_key=mykey
 
 ### API Description
 
-```
+```shell
 GET https://www.pastery.net/api/paste/<id>/
     ?api_key=<api_key>
 ```
@@ -93,11 +91,11 @@ Parameters:
 
 * **api_key** [optional]: The API key of the user whom the paste will belong to. This may become mandatory at some point, so it'd be best to pass one in any case. You can get this from your [account page](https://www.pastery.net/account/).
 
-### Command-line example
+**Command-line example**
 
 Here's how you can get a single paste using `curl`:
 
-```
+```shell
 $ curl https://www.pastery.net/api/paste/about/?api_key=mykey
 {
     "pastes": [
@@ -115,9 +113,7 @@ $ curl https://www.pastery.net/api/paste/about/?api_key=mykey
 
 ## Deleting a paste
 
-### API Description
-
-```
+```shell
 DELETE https://www.pastery.net/api/paste/<id>/
     ?api_key=<api_key>
 ```
@@ -126,17 +122,13 @@ Parameters:
 
 * **api_key** [optional]: The API key of the user whom the paste will belong to. This may become mandatory at some point, so it'd be best to pass one in any case. You can get this from your [account page](https://www.pastery.net/account/).
 
-### Command-line example
-
 Here's how you can delete a paste using `curl`:
 
-```
+```shell
 $ curl -X DELETE https://www.pastery.net/api/paste/sanwhh/?api_key=mykey
 {"result": "success"}
 
 ```
-
-
 
 ## Language list
 

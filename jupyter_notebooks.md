@@ -1,8 +1,7 @@
-Jupyter Notebooks
-==================
+# Jupyter Notebooks
 
-Adding kernel for Hydrogen in Atom
-----------------------------------
+## Adding kernel for Hydrogen in Atom
+
 1. Install the ipykernel in your virtual environment:
 `pipenv install ipykernel`
 
@@ -14,9 +13,7 @@ Adding kernel for Hydrogen in Atom
 
 4. Start Atom (from within pipenv shell) and when you run code (control-enter), Atom should list python kernels to use (including `name-of-kernel`)
 
-
-Installing Modules
-------------------
+## Installing Modules
 
 ```python
 # Install a pip package in the current Jupyter kernel
@@ -26,8 +23,8 @@ import sys
 
 the last word is the name of the module to install
 
-Capturing Output to File
-------------------------
+## Capturing Output to File
+
 You can use `%%capture` Jupyter notebook's magic command to catch output of cell and then paste it to your text file with
 
 ```python
@@ -46,9 +43,7 @@ print(a+ 2)
 
 Also if you want to append to file you must use `-a` parameter
 
-
-Jupyter Notebooks
-=================
+---
 
 -   [How\_to\_get\_started\_coding\_in\_Python?](https://nbviewer.jupyter.org/github/Tanu-N-Prabhu/Python/blob/master/How_to_get_started_coding_in_Python%3F.ipynb),
     this notebook explains how to become a good python programmer, by

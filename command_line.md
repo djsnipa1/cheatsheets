@@ -12,18 +12,23 @@ find . -type f -exec grep "example" '{}' \; -print
 
 **Encrypt:**
 **EASIEST OPTION**
+
 ```bash
 gpg -c file.txt
 ```
+
 Alternative method:
+
 ```bash
 openssl enc -aes-256-cbc -salt -pbkdf2 -in file .txt -out file.enc
 ```
 
 **Decrypt:**
+
 ```bash
 gpg -d file.gpg
 ```
+
 Alternative Method:
 add `-d` to the above command
 
@@ -36,6 +41,7 @@ Simply add **`/place/with/the/file`** to the **`$PATH`** variable with the follo
 ```bash
 export PATH=$PATH:/place/with/the/file
 ```
+
 ---
 
 ## Finding directories over/under a certain size
@@ -58,7 +64,6 @@ telnet towel.blinkenlights.n
 ---
 
 ## Umcompress & Compress
--------------------------
 
 ### 7zip
 
@@ -102,9 +107,9 @@ chmod +x rebol
 
 ---
 
-#  Command Line Notes
+## Command Line Notes
 
-_September 3,2019_
+**September 3,2019**
 
 [Courses Dashboard | Wes Bos](https://courses.wesbos.com/account/access/5cdc7ba285f96c03c1e44b42/view/195975829)
 
