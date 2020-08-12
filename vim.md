@@ -2,7 +2,7 @@
 
 ## vim-markdown 
 
-## Mappings
+### Mappings
 
 The following work on normal and visual modes:
 
@@ -148,4 +148,10 @@ When working with JSON files, you will generally have a big mess of data that ne
 Type the following into the vim command line:
 
 `:%!python -m json.tool`
+
+## Comparing edits to original file
+
+```vim
+:w !diff % -  
+```
 
