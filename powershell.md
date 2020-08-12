@@ -31,9 +31,66 @@ Ammed a file with the `-Amend` flag
 ```powershell
 Command | Out-File -FilePath -Amend file.txt
 ```
+## Write a Powershell Script (for Aliases)
 
+Simple. For example...
 
-### <img width="650" height="325" src=":/7007c20e30a549db8efe7b9eb3cb7431"/>
+Open a Windows PowerShell window and type:
+
+```shell
+nvim $profile
+```
+
+Then create a function, such as:
+
+```powershell
+function goSomewhereThenOpenGoogleThenDeleteSomething {
+    cd C:\Users\
+    Start-Process -FilePath "http://www.google.com"
+    rm fileName.txt
+}
+```
+
+Then type this under the function name:
+
+```powershell
+Set-Alias google goSomewhereThenOpenGoogleThenDeleteSomething
+```
+
+Now you can type the word "google" into Windows PowerShell and have it execute the code within your function!
+
+### Another Example of writing a Powershell Script (for Aliases)
+
+You will have to create a function first, that has your command in it. Then create an alias to that function.
+
+**This is using the Powershell command line:**
+
+```powershell
+PS C:\Users\jpogran\code\git\scripts> function get-gitstatus { git status }
+
+PS C:\Users\jpogran\code\git\scripts> get-gitstatus
+# On branch master
+nothing to commit (working directory clean)
+
+PS C:\Users\jpogran\code\git\scripts> Set-Alias -Name gs -Value get-gitstatus
+
+PS C:\Users\jpogran\code\git\scripts> gs
+# On branch master
+nothing to commit (working directory clean)
+```
+
+**This is inside the `$profile` file:**
+
+```powershell
+function get-gitstatus {
+  git status
+}
+
+Set-Alias -Name gs -Value get-gitstatus
+```
+---
+
+> Not quite sure what I pasted below this line but someday I'll check it out.
 
 ### PowerShell’s Path Environmental Variable
 
