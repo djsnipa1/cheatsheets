@@ -12,6 +12,12 @@ PS C:\>Copy-Item "C:\Wabash\Logfiles\mar1604.log.txt" -Destination "C:\Presentat
 C:\users\chad\Downloads> Get-Help Copy-Item -examples
 ```
 
+## Listing Symbolic Links and Targets
+
+```powershell
+dir 'd:\Temp' -recurse -force | ?{$_.LinkType} | select FullName,LinkType,@{ Name = "Targets"; Expression={$_.Target -join "`t"} }
+```
+
 ## Download files with Powershell
 
 ```powershell
