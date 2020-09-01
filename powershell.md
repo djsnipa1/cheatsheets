@@ -6,6 +6,32 @@
 PS C:\>Copy-Item "C:\Wabash\Logfiles\mar1604.log.txt" -Destination "C:\Presentation"
 ```
 
+## List certain things about directories...
+
+```powershell
+Get-ChildItem . | ? { $_.PSIsContainer } | sort LastWriteTime | select name,lastwritetime
+```
+
+1. This does a `Get-ChildItem` in directory `.` 
+
+2. then pipes to this `| ? { $_.PSIsContainer }`
+
+> the `?` is short for `Where-Object` and `{ $_.PSIsContainer }` displays only directories
+
+3. then pipes to `| sort LastWriteTime`
+
+> `| sort LastWriteTime` sorts by when the directories were saved last
+
+4. then pipes to `| select name,lastwritetime`
+
+> `| select name,lastwritetime` displays it in the 2 columns of `name` and `lastwritetime`
+
+### Another Example
+
+```powershell
+Get-ChildItem | where {!$_.PsIsContainer} | Select-Object Name > onlyFiles.txt
+```
+
 ## Get help for commands
 
 ```powershell
@@ -32,11 +58,12 @@ Start-BitsTransfer -Source $url -Destination $output
 Command | Out-File -FilePath file.txt
 ```
 
-Ammed a file with the `-Amend` flag
+**Ammed a file with the `-Amend` flag**
 
 ```powershell
 Command | Out-File -FilePath -Amend file.txt
 ```
+
 ## Write a Powershell Script (for Aliases)
 
 Simple. For example...
@@ -75,12 +102,14 @@ You will have to create a function first, that has your command in it. Then crea
 PS C:\Users\jpogran\code\git\scripts> function get-gitstatus { git status }
 
 PS C:\Users\jpogran\code\git\scripts> get-gitstatus
+
 # On branch master
 nothing to commit (working directory clean)
 
 PS C:\Users\jpogran\code\git\scripts> Set-Alias -Name gs -Value get-gitstatus
 
 PS C:\Users\jpogran\code\git\scripts> gs
+
 # On branch master
 nothing to commit (working directory clean)
 ```
@@ -276,6 +305,8 @@ Set-Location Env:
 Get-ChildItem
 
 ```
+
+---
 
 There are other ways of listing the environmental variables, for example:  
 Get-Item Env:
