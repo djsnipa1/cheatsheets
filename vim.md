@@ -160,6 +160,7 @@ Type the following into the vim command line:
 ```vim
 :w !diff % -  
 ```
+
 ## Changing 3 Number Color to rgb() Colors
 
 Use this command to search, for example: `111,288,105`
@@ -167,6 +168,7 @@ Use this command to search, for example: `111,288,105`
 ```vim
 :%s/\([0-9]\{1,3\},[0-9]\{1,3\},[0-9]\{1,3\}\)/rgb(\1\)/g
 ```
+
 Now your numbers will look like `rgb(111,288,105)`
 
 > I used this technique to view the color highlights of `colorscheme.ini` files for `colortool`
