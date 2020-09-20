@@ -53,3 +53,25 @@ put it in between `<kbd>` `</kbd>` tags like so:
 And the destination anchor:
 
 ### <a name="pookie"></a>Some heading
+
+---
+
+## Youtube Embed
+
+### Responsive Embed
+<style>.embedtool {position: relative;height: 0;padding-top: 56%;overflow: hidden;max-width: 100%;} .embedtool iframe, .embedtool object, .embedtool embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; } .embedtool .fluid-vids {position: initial !important}</style><div class="embedtool"><iframe src="https://www.youtube.com/embed/aRJvFScf_vg" frameborder="0" allowfullscreen></iframe></div>
+
+[Responsive YouTube Embed Code Generator Tool](https://www.ilmigo.com/tools/responsive-youtube-embed-code-generator/)
+
+
+### Embed
+<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="445" height="250" type="text/html" src="https://www.youtube.com/embed/aRJvFScf_vg?autoplay=0&fs=1&iv_load_policy=1&showinfo=0&rel=0&cc_load_policy=1&start=0&end=0&origin=https://youtubeembedcode.com"><div><small><a href="https://youtubeembedcode.com/nl/">youtubeembedcode nl</a></small></div><div><small><a href="https://www.hostsearch.com/">ultimate Web traffic</a></small></div></iframe>
+
+[⇒ YouTube Embed Code Generator || Simple, Free & Quick || 2020](https://youtubeembedcode.com/en/)
+
+### Simple 
+
+<iframe src="https://www.youtube.com/embed/aRJvFScf_vg?cc_load_policy=1&color=white" width="400" height="250" frameborder="0"></iframe>
+
+[YouTube Custom Embed Generator](https://jprusik.github.io/custom-yt-embed/index.html)
+
