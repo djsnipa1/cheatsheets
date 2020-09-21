@@ -1,5 +1,22 @@
 # Powershell 
 
+## Powershell Modules
+
+__Installing__
+
+Find the path of your modules by typing:
+
+`$Env:PSModulePath`
+
+__Listing__
+
+`Get-Module -ListAvailable`
+
+__Importing__
+
+`Import-module -name ModuleName`
+
+
 ## Copy a file to the specified directory      
 
 ```powershell
