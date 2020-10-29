@@ -45,3 +45,5 @@ n
 *.vscode
 birthday.md
 index.html
+!/README.md
+
