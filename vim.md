@@ -173,3 +173,12 @@ Now your numbers will look like `rgb(111,288,105)`
 
 > I used this technique to view the color highlights of `colorscheme.ini` files for `colortool`
 
+## Split View
+
+Yes, vim has the ability to split both horizontally using :split and vertically using :vsplit which both work just like :edit for opening a file, except they open it in a horizontal / vertical split respectively.
+
+You can either split vim windows by opening multiple files using -o, -O, -o2 parameters.
+
+
+
+
