@@ -179,6 +179,19 @@ Yes, vim has the ability to split both horizontally using :split and vertically 
 
 You can either split vim windows by opening multiple files using -o, -O, -o2 parameters.
 
+## Add a list of sequential numbers
+
+[How to generate a number sequence in file using vi or Vim?](https://stackoverflow.com/questions/9903660/how-to-generate-a-number-sequence-in-file-using-vi-or-vim)
+
+Starting with Vim 7.4.754 one can use g Ctrl-a, see :help <kbd>CTRL</kbd> + <kbd>A</kbd>
+Go to line you want to start with, use <kbd>CTRL</kbd> + <kbd>Y</kbd> to blockwise select the first character, go down as many lines as you want, press <kbd>Shift</kbd> + <kbd>i</kbd>, enter 0 (this is 0, followed by<kbd>Space</kbd>) and<kbd>Esc</kbd> to exit insert mode.
+
+Now use <kbd>g</kbd> <kbd>v</kbd> to re-select the previously selected area. Press <kbd>g</kbd> <kbd>CTRL</kbd> + <kbd>a</kbd> to create a sequence.
+I start with a 0 here, so I can re-select by <kbd>g</kbd> + <kbd>v</kbd>. If you start with a 1, you need to re-select by hand while omitting the first 1.
+
+Use 2 <kbd>g</kbd> <kbd>CTRL</kbd> + <kbd>a</kbd> to use a step count of 2.
+
+![https://i.stack.imgur.com/CbUTo.gif](https://i.stack.imgur.com/CbUTo.gif)
 
 
 
