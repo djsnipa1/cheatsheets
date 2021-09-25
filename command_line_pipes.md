@@ -4,10 +4,8 @@
 
 ## Pipes and filters are everywhere. Not just in your homes but also in the terminal.
 
-
 ![Image for post](https://miro.medium.com/max/2306/1*zevJOoH3COUwqhhj0R_fBA.png)
-
-![Image for post](https://miro.medium.com/max/4612/1*zevJOoH3COUwqhhj0R_fBA.png)
+l
 
 ## What is a Filter? ䷜
 
@@ -405,13 +403,23 @@ Fray
 
 **✏️ fmt:** A Simple optimal text formatter, it reformats paragraphs in specified file.
 
-$ cat sample.txt | fmtAdriaens Dishman Anna Tichner Bank Guerro Phil Cuniam ReagenDobrovolny Cicily Veale Coop Joysey kendrick Liggons micheal Fraybenn Cork Micheal Fray
+```shell
+$ cat sample.txt | fmt
 
+Adriaens Dishman Anna Tichner Bank 
+Guerro Phil Cuniam Reagen 
+Dobrovolny Cicily Veale Coop 
+Joysey kendrick Liggons Micheal  
+Fraybenn Cork Micheal Fray
+```
 Following option can be used with fmt command:
 
 > **_-w_** → Reformat the text with a specific line width
 
-$ cat sample.txt | fmt -w 1AdriaensDishmanAnnaTichnerBankGuerroPhilCuniamReagenDobrovolnyCicilyVealeCoopJoyseykendrick  
+```shell
+$ cat sample.txt | fmt -w 1
+AdriaensDishmanAnnaTichnerBankGuerroPhilCuniamReagenDobrovolnyCicilyVealeCoopJoyseykendrick  
+```
 ...
 
 * * *
