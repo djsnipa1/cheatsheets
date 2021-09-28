@@ -1,5 +1,18 @@
 # Command Line
 
+## `diff` files in vim
+
+```shell
+nvim -d file1.txt file2.txt`
+```
+
+`diff` **online** files in vim
+
+```shell
+nvim -d <(curl -sL "https://crap.com/file1.txt") \
+<(curl -sL "https://crap.com/file2.txt")
+```
+
 ## `curl`
 
 See [curl.md](curl.md)
