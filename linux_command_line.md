@@ -1,5 +1,9 @@
 # Command Line
 
+## `curl`
+
+See [curl.md](curl.md)
+
 ## Showing Key Codes
 
 ```shell
