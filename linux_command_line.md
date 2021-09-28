@@ -1,5 +1,13 @@
 # Command Line
 
+## Showing Key Codes
+
+```shell
+xev -event keyboard
+```
+
+-
+
 ## Find text in a file
 
 ```shell
@@ -89,20 +97,12 @@ tar -xzf rebol.tar.gz
 
 The result will be a new directory containing the files.
 
-(Also, on many systems, when you download the tar.gz from a web browser, an unpacker will open, and you can just use that.)
-
 ### For just .gz (.gzip)
 
 In some cases the file is just a gzip format, not tar. Then you can use:
 
 ```shell
 gunzip rebol.gz
-```
-
-In order to execute it, you will need to add execute permissions to the file:
-
-```shell
-chmod +x rebol
 ```
 
 ---
@@ -113,11 +113,9 @@ chmod +x rebol
 
 [Courses Dashboard | Wes Bos](https://courses.wesbos.com/account/access/5cdc7ba285f96c03c1e44b42/view/195975829)
 
-`take` - makes an new directory and puts you in it
+**zsh**
+<kbd>CTRL</kbd> + <kbd>R</kbd> lets you search through recent commands
 
 **History**
-Example `git ` and <kbd>⇧</kbd> goes through all `git ` command history 
+Example `git ` and <kbd>⇧</kbd> goes through all `git` command history 
 
-**zsh**
-
-<kbd>CTRL</kbd> + <kbd>R</kbd> lets you search through recent commands
