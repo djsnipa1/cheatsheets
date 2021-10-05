@@ -1,5 +1,35 @@
 # Command Line
 
+## Cleaning and clearing logfiles
+
+### journal
+
+Clearing out logs older than 10 days
+
+```shell
+journalctl --vacuum-time=10d
+```
+
+Clearing out journal more than 2 gigs
+
+```shell
+journalctl --vacuum-size=2G
+```
+
+### Any log files
+
+Get sizes 
+
+```shell
+du -h /var/log/
+```
+
+Clear logs that are huge
+
+```shell
+cat /dev/null > whatever_log.log 
+```
+
 ## Setting up webservers
 
 See [web_servers.md](web_servers.md)
