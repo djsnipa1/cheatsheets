@@ -148,15 +148,26 @@ While in any edit mode (insert, replace, etc.) there are some keys that are used
 
 ### Repitition Counts
 
-Most commands can be prefixed with a multidigit number, that influences the way the command works.
-| z | position *n*th line number |
-| G | goto *n*th line number |
-| | | goto *n*th column number |
-| r | replace next *n* characters |
-| s | substitute for next *n* characters |
-| << | shift *n* lines left one shiftwidth |
-| ^ | ignored? |
-| \_ | advance *n*\-1 lines |
+Most commands can be prefixed with a multi-digit number, that influences the way the command works.
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+---
+
+| Key |             Description             |    
+|————-|:———————————-----------------------—:| 
+|  z  | position *n*th line number          |
+|  G  | goto *n*th line number              |
+|  \| | goto *n*th column number            |
+|  r  | replace next *n* characters         |
+|  s  | substitute for next *n* characters  |
+|  << | shift *n* lines left one shiftwidth |
+|  ^  | ignored?                            |
+|  \_ | advance *n*\-1 lines                |
 
 Need to differentiate between such things as 5yj vs. y5j?
 
@@ -164,40 +175,45 @@ Need to differentiate between such things as 5yj vs. y5j?
 
 Standard vi does have an ability to toggle between two different files. These will be the last two edited files (edit new files with :efilename) To switch files, use control\-^.
 
-These filenames can be reffered to in ex commands, and subshell filters, using two special characters: "%" refers to the current file, and "#" refers to the previous file. Here's some handy things you can do with this feature:
+These filenames can be reffered to in ex commands, and subshell filters, using two special characters: `%` refers to the current file, and `#` refers to the previous file. Here's some handy things you can do with this feature:
 
-:map v :!chmod 644 %^\[                make world\-readable
-:map q :!ci \-l %^\[                    RCS checkin
-:map V :!diff # %^\[                   compare previous and current files
+```vim
+:map v :!chmod 644 %^\[      make world\-readable
+:map q :!ci \-l %^\[         RCS checkin
+:map V :!diff # %^\[         compare previous and current files
+```
 
 ### Tags
 
 Tags are cool, but I don't use them. Go figure. Maybe I'll write something up here someday.
 
-### Mappings and Abbreviations
+### Mappings and Abbreviations    
 
-:map lets you bind a list of keystrokes to a shortcut in command\-mode. This shortcut can be a multiple\-key sequence (with limitations), and the commands within can enter and exit edit\-mode. Some examples of :map can be found above, in the multibuffer section. Below is a list of all the normally unbound keys in vi command\-mode.
+`:map` lets you bind a list of keystrokes to a shortcut in command\-mode. This shortcut can be a multiple\-key sequence (with limitations), and the commands within can enter and exit edit\-mode. Some examples of :map can be found above, in the multibuffer section. Below is a list of all the normally unbound keys in vi command\-mode.
 
 g q v K V # \* \\ = ^A ^C ^I ^K ^O ^V ^W ^X ^\[ ^\_
 
 When you try to map multiple key sequences, you won't be able to start them with lower or upper case letters ("Too dangerous to map that"), but the punctuation and control characters are fair game. In addition, : can't be mapped, and sometimes a few other keys. Multiple key sequences can also be very useful with terminal\-generated sequences, which is why the escape key is bindable. I have my xterm set to generate =f1 for function key one, and so on, so all the function keys are easier to use with bindings.
 
-If you use multiple key shortcuts, you'll want to know about the timeout variable. With :se timeout, you have a limited time to generate the key sequence. This is useful if the key sequences are terminal generated. With :se notimeout, it just keeps waiting until the next character does or doesn't match any possible current sequences.
+If you use multiple key shortcuts, you'll want to know about the timeout variable. With `:se timeout`, you have a limited time to generate the key sequence. This is useful if the key sequences are terminal generated. With `:se notimeout`, it just keeps waiting until the next character does or doesn't match any possible current sequences.
 
-:map! lets you bind a list of keystrokes to a shortcut in edit\-mode. This is useful for adding editing commands to edit mode. One popular trick is to bind the arrow keys to move up and down while (apparently) staying in edit\-mode, as in the last four lines below.
+`:map!` lets you bind a list of keystrokes to a shortcut in edit\-mode. This is useful for adding editing commands to edit mode. One popular trick is to bind the arrow keys to move up and down while (apparently) staying in edit\-mode, as in the last four lines below.
 
+```vim
 :map! ^? ^H                         Make delete act like backspace
 :map! ^\[OA ^\[ka                     xterm arrow sequences will
 :map! ^\[OB ^\[ja                       exit edit\-mode, move the
 :map! ^\[OC ^\[la                       cursor, and re\-enter edit\-mode.
 :map! ^\[OD ^\[ha
+```
 
 If you use the above trick for arrow\-keys in edit\-mode, you'll want to set timeout, because otherwise you won't get beeps at all when you hit escape, only when you use the next keystroke. With timeout, you get the beep, but after the timeout. Since both of these are annoying, it may be a useful choice to avoid multikey sequences that involve escape, as a matter of taste. Also, many systems now set up command\-mode arrow keys in vi by default, which also leads to the same problem.
 
-:ab lets you bind a key sequence to an abbreviation, for use in edit\-mode. Abbreviations don't fire until vi decides that you've typed the shortcut as a whole word. So if taf is a shortcut for Thomas A. Fine, and I type taffy, it won't substitute because I didn't enter taf as a word by itself. (If I'd used :map!, then taffy would do the replacement before I got to the second "f".)
+`:ab` lets you bind a key sequence to an abbreviation, for use in edit\-mode. Abbreviations don't fire until vi decides that you've typed the shortcut as a whole word. So if `taf` is a shortcut for `Thomas A. Fine`, and I type `taffy`, it won't substitute because I didn't enter `taf` as a word by itself. (If I'd used :map!, then taffy would do the replacement before I got to the second `f`.)
 
 Abbreviations are echoed normally until complete, therefore the abbreviation can't contain escape (you'd leave edit\-mode before completing the abbreviation), but the replacement expression can contain escape, and can leave and return to edit\-mode.
 
+```vim
 :ab teh the
 :ab #d #define
 :ab #i #include
@@ -205,12 +221,13 @@ Abbreviations are echoed normally until complete, therefore the abbreviation can
 :ab cmmap mmap(NULL,st.st\_size,PROT\_READ,MAP\_SHARED,fd,0);
 :ab readsig ^\[G:r ~/misc/sig^M
 }
+```
 
-To keep a live abbreviation from going off in your hands, use ^V. For instance, if I want to type teh but have the the abbreviation above, I can let it "fix" it, then back up and unfix it; or I can type "teh^V..." and it won't expand the abbreviatoin.
+To keep a live abbreviation from going off in your hands, use ^V. For instance, if I want to type `teh` but have the `the` abbreviation above, I can let it "fix" it, then back up and unfix it; or I can type "teh^V..." and it won't expand the abbreviatoin.
 
 [vi macros document](http://soma.npa.uiuc.edu/docs/vi.macros)
 
-### Repeating with .
+### Repeating with `.`
 
 Commands can be repeated with the redo command, normally bound to ".", but I've found this to be occasionally unpredictable. If you use multiple key sequences in a macro, and vi is waiting to see if one of those sequences might complete, and you start a new command here, it won't be noticed by the redo. (Solaris, HPUX at least).
 
@@ -240,37 +257,6 @@ Note the control\-v's are there to enter the following characters, which would o
 It's better because you don't have to prejoin the paragraph by hitting J an arbitrary number of times. Just hit v (or whatever you've mapped it to) starting at the beginning or in the middle of the paragraph, and it joines the rest of the paragraph together, formats one line, and moves the cursor down again. Just keep hitting v and it will keep formatting. You have to stop one before the end or you'll end up with an extra short line. It also does not leave spaces at the end of the line. [![vi Powered!](https://hea-www.harvard.edu/~fine/images/vi.gif)](http://www.darryl.com/vi.shtml)
 
 ---
+ 
+[![Tom](https://hea-www.harvard.edu/~fine/ironmotif/tomplate-riveted-small-trans.gif) Fine's Home](https://hea-www.harvard.edu/~fine/index.html) 
 
-|  [![Tom](https://hea-www.harvard.edu/~fine/ironmotif/tomplate-riveted-small-trans.gif) Fine's Home](https://hea-www.harvard.edu/~fine/index.html) |
-
-|
-
-|  |
-
-[×](javascript:void(0) "Clear search box")
-
- |
-
- | search |
-
- |
-
-Web
-
-Image
-
-|
-
- |
-
-Sort by:
-
-Relevance
-
-Relevance
-
-Date
-
- |
-
- | [![](https://hea-www.harvard.edu/~fine/images/1x1-white.gif)](mailto:theopony@head.cfa.harvard.edu) | [Send Me Email](mailto:fine@head.cfa.harvard.edu) |
