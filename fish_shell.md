@@ -1,5 +1,31 @@
 # fish shell
 
+## Defining an Alias
+
+1. Define alias in shell
+```fish
+alias rmi="rm -i"
+```
+
+2. Define alias in config file
+```fish
+alias rmi="rm -i"
+```
+
+3. This is equivalent to entering the following function:
+```fish
+function rmi
+    rm -i $argv
+end
+```
+
+4. Then, to save it across terminal sessions:
+```fish
+funcsave rmi
+```
+
+This last command creates the file `~/.config/fish/functions/rmi.fish`.
+
 ## Differences between bash and fish:
 
 *   setting variables
