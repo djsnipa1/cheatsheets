@@ -19,4 +19,4 @@ pacman -Syu
 sudo pacman -Scc
 ```
 
-
+---

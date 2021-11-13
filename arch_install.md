@@ -24,5 +24,15 @@ ip a
 ping google.com
 ```
 
+---
 
+## Setting the clock
+
+View clock by typing 'timedatectl'
+
+To change the timezone:
+
+```shell
+timedatectl set-timezone America/Indianapolis
+```
 
