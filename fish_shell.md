@@ -1,5 +1,21 @@
 # fish shell
 
+## adding `less` variable
+
+The only way I can see to code your specific example is :
+
+```shell
+function L; env $argv | less --chop-long-lines; end
+``` 
+
+and invoke with 
+
+```shell
+L echo "hello world"
+```
+
+-- obviously using a function as a command, not like a zsh global alias.
+
 ## Defining an Alias
 
 1. Define alias in shell
@@ -25,6 +41,7 @@ funcsave rmi
 ```
 
 This last command creates the file `~/.config/fish/functions/rmi.fish`.
+
 
 ## Differences between bash and fish:
 
