@@ -2,6 +2,8 @@
 
 ## adding `less` variable
 
+Found the answer to this [here](https://stackoverflow.com/questions/27471823/zsh-global-alias-equivalent-in-fish-shell#comment43416010_27471823)
+
 The only way I can see to code your specific example is :
 
 ```shell
