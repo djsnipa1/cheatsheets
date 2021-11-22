@@ -1,5 +1,12 @@
 # fish shell
 
+## Showing a function or alias
+
+```shell
+# Replace function_name with your function or alias
+type function_name
+```
+
 ## adding `less` variable
 
 Found the answer to this [here](https://stackoverflow.com/questions/27471823/zsh-global-alias-equivalent-in-fish-shell#comment43416010_27471823)
