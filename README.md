@@ -1,5 +1,11 @@
 # cheatsheets
 
+To generate an index of all the markdown files I used the [`markdown-notes-tree`](https://www.npmjs.com/package/markdown-notes-tree). See [[README.md]]
+
+I also am expirementing with the [`markdown-index`](https://github.com/zeke/markdown-index) library. See [[index.md]]
+
+---
+
 [![HitCount](http://hits.dwyl.com/djsnipa1/cheatsheets.svg)](http://hits.dwyl.com/djsnipa1/cheatsheets)
 
 
