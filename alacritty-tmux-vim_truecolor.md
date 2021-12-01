@@ -1,3 +1,5 @@
+# Alacritty, Tmux, and Vim
+
 This should make True Color (24-bit) and italics work in your [tmux](https://github.com/tmux/tmux/wiki) session and [vim](https://github.com/vim/vim) when using [Alacritty](https://github.com/alacritty/alacritty) (and should be compatible with any other terminal emulator, including [Kitty](https://github.com/kovidgoyal/kitty)).
 
 Tested successfully in [bash](https://www.gnu.org/software/bash/) and [zsh](https://www.zsh.org/) with latest packages from [Arch Linux](https://archlinux.org/) (with exception of [neovim](https://github.com/neovim/neovim) built from source):
