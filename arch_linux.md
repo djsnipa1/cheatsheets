@@ -19,4 +19,11 @@ pacman -Syu
 sudo pacman -Scc
 ```
 
+**uninstall package**
+
+```shell
+sudo pacman -Rs
+```
+
+
 ---
