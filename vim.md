@@ -5,7 +5,12 @@
 ```vim
 :%y+
 ```
+## open vim on a specific line number
 
+```shell
+nvim filename +123
+# 123 is line number
+```
 ## vim-markdown 
 
 ### Mappings
@@ -131,7 +136,7 @@ Here’s a brief explanation of how this vim “delete blank lines” command wo
 :w !sudo tee %
 ```
 
-Add this to `.config/nvim/init.vim`:
+Add this to `.vimrc` or `.config/nvim/init.vim`:
 
 ```
 " Allow saving of files as sudo when I forgot to start vim using sudo.

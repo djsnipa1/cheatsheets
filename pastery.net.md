@@ -2,6 +2,14 @@
 
 Pastery includes a very simple API that you can use for integration with editors and other programs.
 
+## Duration for "never"
+
+I found this [here](https://github.com/maximeplante/vscode-pastery/issues/2#issue-319908389)
+
+> **`26280000`**
+
+> According to the developer the pastery api does not have an option for never expire. What may work is using the parameter duration: 26280000, this results in a paste of about 50 years.
+
 ## Creating a paste
 
 ```shell
