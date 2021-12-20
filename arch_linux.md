@@ -25,5 +25,14 @@ sudo pacman -Scc
 sudo pacman -Rs
 ```
 
+**clean the cache in `~/home` directory
+
+```shell
+sudo du -sh ~/.cache/
+`````
+
+  my results:
+  ![num3-clean-cache](images/num3-clean-cache.png)
 
 ---
+
