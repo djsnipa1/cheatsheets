@@ -31,8 +31,13 @@ sudo pacman -Rs
 sudo du -sh ~/.cache/
 `````
 
-  my results:
+  my results:    
   ![num3-clean-cache](images/num3-clean-cache.png)
+
+  ![num3-clean-cache](https://github.com/djsnipa1/cheatsheets/blob/assets/images/num3-clean-cache.png)
+
+  sha for image above:
+  `abd33a8f83306b93bb69a767d0bf0ed4e2963843`
 
 ---
 
