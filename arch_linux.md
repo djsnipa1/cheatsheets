@@ -43,5 +43,4 @@ sudo du -sh ~/.cache/
 
   ![num3-clean-cache](https://github.com/djsnipa1/cheatsheets/assets/images/num3-clean-cache.png?raw=true)
 ---
----
 
