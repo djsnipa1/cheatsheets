@@ -1,6 +1,13 @@
-# Arch Linux 
+# Arch Linux
 
-## `pacman` 
+## `yay`
+
+** update packages **
+```shell
+yay -Syyu
+```
+
+## `pacman`
 
 **install package**
 
@@ -11,7 +18,7 @@ pacman -S <package name>
 **update all installed packages**
 
 ```shell
-pacman -Syu 
+pacman -Syu
 ```
 **Clear pacman cache**
 
@@ -31,7 +38,7 @@ sudo pacman -Rs
 sudo du -sh ~/.cache/
 `````
 
-  my results:    
+  my results:
   ![num3-clean-cache](images/num3-clean-cache.png)
 
   ![num3-clean-cache](https://github.com/djsnipa1/cheatsheets/blob/assets/images/num3-clean-cache.png)
