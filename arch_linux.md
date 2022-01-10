@@ -31,6 +31,30 @@ sudo pacman -Scc
 ```shell
 sudo pacman -Rs
 ```
+## Using `debtap` to install a package
+
+When there is no AUR package for something you are trying to install, you should try this method.
+
+**install `debtap`**
+```shell
+yay -S debtap
+```
+
+**update the repos**
+```shell
+sudo debtap -u
+```
+
+**convert the `.deb` file**
+```shell
+sudo debtap filename.deb
+```
+
+**install the converted `.tar.zst` file**
+```shell
+sudo pacman -U filename.tar.zst
+```
+---
 
 **clean the cache in `~/home` directory
 
