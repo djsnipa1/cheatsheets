@@ -31,6 +31,13 @@ sudo pacman -Scc
 ```shell
 sudo pacman -Rs
 ```
+
+**remove unused packages**
+
+```shell
+sudo pacman -Rns (pacman -Qqtd)
+```
+---
 ## Using `debtap` to install a package
 
 When there is no AUR package for something you are trying to install, you should try this method.
