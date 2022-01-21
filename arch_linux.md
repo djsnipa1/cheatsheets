@@ -1,5 +1,10 @@
 # Arch Linux
 
+## check installed fonts
+```shell
+fc-list
+```
+
 ## `yay`
 
 ** update packages **
