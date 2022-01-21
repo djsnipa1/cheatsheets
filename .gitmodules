@@ -1,0 +1,3 @@
+[submodule "vim-cheatsheet"]
+	path = vim-cheatsheet
+	url = https://github.com/ibhagwan/vim-cheatsheet
