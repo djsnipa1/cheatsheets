@@ -1,5 +1,11 @@
 # fish shell
 
+## Printing list of numbered files
+
+```shell
+printf '%03d\n' (seq 0 99)
+```
+
 ## Showing a function or alias
 
 ```shell
