@@ -2,8 +2,8 @@
 
 ## Key Symbols
 
-<kbd>⌘</kbd> - Command (Cmd)     
-<kbd>⇧</kbd> - Shift    
+<span style="font-size: 4em;"><kbd>⌘</kbd> - Command (Cmd)     </span>     
+<font size="4"><kbd>⇧</kbd> - Shift    </font>    
 <kbd>⌥</kbd> - Option (or Alt)    
 <kbd>⌃</kbd> - Control (or Ctrl)    
 
