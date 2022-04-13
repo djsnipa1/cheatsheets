@@ -1,16 +1,6 @@
 # `skhd`
 
-## Key Symbols
-
-<span style="font-size: 4em;"><kbd>⌘</kbd> - Command (Cmd)     </span>     
-<font size="4"><kbd>⇧</kbd> - Shift    </font>    
-<kbd>⌥</kbd> - Option (or Alt)    
-<kbd>⌃</kbd> - Control (or Ctrl)    
-
-<li><code>⌘</code> Command (or Cmd)</li>
-<li><code>⇧</code> Shift</li>
-<li><code>⌥</code> Option (or Alt)</li>
-<li><code>⌃</code> Control (or Ctrl)</li>
+## <code>⌘</code> Command     <code>⇧</code> Shift    <code>⌥</code> Option (or Alt)    <code>⌃</code> Control 
 
 ## `skhd` key combos
 
