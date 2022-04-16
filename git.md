@@ -131,6 +131,26 @@ $ git push upstream HEAD:master
 (You can't just `git push` because your local branch name is different than the remote.)
 
 Done! Refresh the Github PR page and you'll see that the PR is now merged+closed.
+
+## clone into a non-empty folder
+
+```shell
+git init     
+git remote add origin PATH/TO/REPO     
+git fetch     
+git checkout -t origin/master -f
+```
+
+or this maybe
+
+```shell
+git init
+git remote add origin PATH/TO/REPO
+git fetch
+git reset origin/master  # Required when the versioned files existed in path before "git init" of this repo.
+git checkout -t origin/master
+```
+
 ## Diff master and a branch
 
 ```bash
