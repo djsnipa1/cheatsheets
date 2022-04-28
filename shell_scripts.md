@@ -1,10 +1,12 @@
 # Shell Scripts
 
-## One liner `install.sh` from github
+## One-liner `install.sh` from github
 
 ```bash
 wget -O - https://raw.githubusercontent.com/<username>/<project>/<branch>/<path>/<file> | bash
-
+```
+Here is my current one-liner that I've been using to install deps on [gitpod.io](https://gitpod.io)
+```bash
 wget -O - https://raw.githubusercontent.com/djsnipa1/psytrance-new-releases/master/install.sh | bash
 ```
 ## Multiline strings
