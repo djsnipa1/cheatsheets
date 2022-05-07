@@ -13,3 +13,14 @@ The following example mounts the location you specify, in the iOS Files popup th
 ```shell
 mount -t ios filez /mnt
 ```
+
+## Using clipboard (when "paste" button isn't working)
+
+This will put clipboard contents to `stdout`. 
+```shell
+cat /dev/clipboard
+
+# save clipboard to a file
+cat /dev/clipboard > file.txt
+```
+
