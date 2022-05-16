@@ -6,10 +6,6 @@ tags:
 ---
 # replit Node.JS 24/7 Project Hoster
 
-source: [NotNexuss/NodeJS-Project-Hoster: Host your repl.it project 24/7 with this code!, compatible with Node.JS.](https://github.com/NotNexuss/NodeJS-Project-Hoster)
-
-*This code is only compatible for node.js. For python, [click me](https://github.com/ItzSidhan/Python-Project-Hoster)!*
-
 ## Applying
 Open your main repl file (example: index.js, app.js, main.js etc...) and at the top and the end of the code, paste this simple code inside:
 
@@ -23,8 +19,6 @@ End of the code:
 keepAlive();
 ```
 
-<br>
-</br>
 After that, create a new file named `server.js` and copy paste this code inside the file:
 
 ```js
@@ -44,8 +38,9 @@ function keepAlive() {
 module.exports = keepAlive;
 ```
 
-<br>
-</br>
-
 Finally, connect the web address given at top right corner to a hosting website. I use [freshping](https://app.freshping.io) the most.
+
+source: [NotNexuss/NodeJS-Project-Hoster: Host your repl.it project 24/7 with this code!, compatible with Node.JS.](https://github.com/NotNexuss/NodeJS-Project-Hoster)
+
+*This code is only compatible for node.js. For python, [click me](https://github.com/ItzSidhan/Python-Project-Hoster)!*
 
