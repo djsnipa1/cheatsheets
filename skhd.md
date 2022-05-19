@@ -1,6 +1,6 @@
 # `skhd`
 
-## <code>⌘</code> Command     <code>⇧</code> Shift    <code>⌥</code> Option (or Alt)    <code>⌃</code> Control 
+## <code>⌘</code> Command  <code>⇧</code> Shift  <code>⌥</code> Option (or Alt)  <code>⌃</code> Control 
 
 ## `skhd` key combos
 
