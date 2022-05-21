@@ -67,7 +67,7 @@ sudo pacman -U filename.tar.zst
 
 ```shell
 sudo du -sh ~/.cache/
-`````
+```
 
   my results:
   ![num3-clean-cache](images/num3-clean-cache.png)
