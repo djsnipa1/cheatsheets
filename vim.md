@@ -5,6 +5,21 @@
 ```vim
 :%y+
 ```
+
+## repeat characters to a specific column 
+
+In the following example, `x` is whatever characters you want to repeat.
+
+```vim
+80Ax<ESC>d80|
+```
+
+output:
+
+```
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
 ## open vim on a specific line number
 
 ```shell

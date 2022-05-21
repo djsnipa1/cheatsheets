@@ -1,5 +1,26 @@
 # Command Line
 
+## Scanning network for ip addresees
+
+This does a simple ping scan in the entire subnet to see which hosts                                                                                                                         │
+are online.
+
+### Install **`nmap`**
+
+```shell
+sudo apt-get install nmap
+```
+
+```shell
+nmap -sP 192.168.1.*
+```
+_or more commonly_
+
+```shell
+nmap -sn 192.168.1.0/24
+```
+---
+
 ## Cleaning and clearing logfiles
 
 ### journal
