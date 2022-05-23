@@ -1,5 +1,8 @@
 # HTML5 Boilerplate 
 
+> Source:    
+> [My current HTML boilerplate - Manuel Matuzović](https://www.matuzo.at/blog/html-boilerplate/)
+
 ```html
 <!DOCTYPE html>
 <html lang=“en” class=“no-js”>
