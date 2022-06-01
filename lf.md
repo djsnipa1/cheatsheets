@@ -4,50 +4,20 @@
 |:---------------------------:|---------------------|
 |             `y`             | copy file           |
 |             `d`             | cut file            |
-|             `p`             | paste file          |
+|             `p`             | paste file          | 
+|             `c`             | clears selection    |
 | `ctrl` + `u` & `ctrl` + `d` | half page up & down |
 | `ctrl` + `b` & `ctrl` + `f` | full page up & down |
+|             `$`             | run shell           |
+|             `%`             | pipes shell         |
+|             `!`             | shell and waits     |
+|             `&`             | runs in background  |
+|             `z`             | prefix commands     | 
+|             `s`             | prefix sort         |
+|             `e`             | launch editor       |
+|             `i`             | launch pager        |
+|             `w`             | launch shell        |
 |                             |                     |
-
-`copy` (default `y`) command copies the current file or selections, `cut` (default `d`) command cuts the current file or selections, `paste` (default `p`) command pastes the copied or cut files to the current directory, and `clear` (default `c`) command clears copied or cut files:
-
-![yank-delete-put-clear](https://media.giphy.com/media/1j9eP2K2aAwbl3KLNT/giphy.gif)
-
-`read` (default `:`) command reads a builtin or custom command:
-
-![read](https://media.giphy.com/media/ir9xFlZM1z9cpDoGLo/giphy.gif)
-
-`shell` (default `$`) command runs a command in the shell:
-
-![shell](https://media.giphy.com/media/37nTncZlfehQl6Q3eB/giphy.gif)
-
-`shell-pipe` (default `%`) command runs a command in the shell while piping the input from the ui and output to the ui:
-
-![shell-pipe](https://media.giphy.com/media/9RZzRIN70lofjsuwxa/giphy.gif)
-
-`shell-wait` (default `!`) command runs a command in the shell waits for a key press afterwards:
-
-![shell-wait](https://media.giphy.com/media/3q1sMNb6XDR8EOdNDi/giphy.gif)
-
-`shell-async` (default `&`) command runs a command in the background:
-
-![shell-async](https://media.giphy.com/media/B1hN6oAFh7bw3Hg3J1/giphy.gif)
-
-`search` (default `/`) command reads a pattern to search, `search-back` (default `?`) command searches in the opposite direction, `search-next` (default `n`) and `search-prev` (default `N`) find the next and previous file matching the pattern:
-
-![search](https://media.giphy.com/media/pqxN1xOy2JSTDLLMQk/giphy.gif)
-
-Some default keybindings are provided (prefixed with `z`) to toggle options or change their values:
-
-![options](https://media.giphy.com/media/YVO0JEDh3sWXRaatf3/giphy.gif)
-
-Some default keybindings are provided (prefixed with `s`) to change the values of `sortby` and `info` options:
-
-![sorts](https://media.giphy.com/media/3KXbi0KRdu4kfDq9qq/giphy.gif)
-
-Keybindings are provided to launch an editor (default `e`), a pager (default `i`), and a shell (default `w`):
-
-![editor-pager-shell](https://media.giphy.com/media/58FNHPMoslq3Wi29Ls/giphy.gif)
 
 # Configuration
 
