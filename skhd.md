@@ -2,6 +2,9 @@
 
 ## <code>⌘</code> Command  <code>⇧</code> Shift  <code>⌥</code> Option (or Alt)  <code>⌃</code> Control 
 
+| <code>⌘</code> | <code>⇧</code> | <code>⌥</code> | <code>⌃</code> |
+|---|---|---|---|
+
 ## `skhd` key combos
 
 __focus window__    

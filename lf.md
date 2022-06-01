@@ -1,32 +1,13 @@
 # `lf` file manager
 
-Once installed, running `lf` from shell should start `lf` in the current directory until a `quit` (default `q`) command is received:
-
-![quit](https://media.giphy.com/media/fQMFc1EK9kYlYHYmcQ/giphy.gif)
-
-`up` (default `k` and `<up>`) and `down` (default `j` and `<down>`) commands move up and down in the list:
-
-![up-down](https://media.giphy.com/media/4aexPi7baUx1swsr4N/giphy.gif)
-
-`half-up` (default `<c-u>`) and `half-down` (default `<c-d>`) commands move half a page at a time:
-
-![half-up-down](https://media.giphy.com/media/3cWy2FvZwKV6MA3Hw1/giphy.gif)
-
-`page-up` (default `<c-b>` and `<pgup>`) and `page-down` (default `<c-f>` and `<pgdn>`) commands move a full page at a time:
-
-![page-up-down](https://media.giphy.com/media/69BVSuefSWwgR3A4UB/giphy.gif)
-
-`updir` (default `h` and `<left>`) command moves to parent directory and `open` (default `l` and `<right>`) command opens the current directory or runs the default file opener on your system:
-
-![updir-open](https://media.giphy.com/media/1khWilVlxieu4rK4cW/giphy.gif)
-
-`top` (default `gg` and `<home>`) and `bottom` (default `G` and `<end>`) commands move to the beginning and end of the list:
-
-![top-bottom](https://media.giphy.com/media/dIFUTdrVRM7Y72prSQ/giphy.gif)
-
-`toggle` (default `<space>`) command toggles selection in the current file, `invert` (default `v`) command inverts selections in the current directory, and `unmark` (default `u`) command unmarks all selections:
-
-![toggle-invert-unmark](https://media.giphy.com/media/dhjo0ChZnMkRaTgXA9/giphy.gif)
+|             key             | action              |
+|:---------------------------:|---------------------|
+|             `y`             | copy file           |
+|             `d`             | cut file            |
+|             `p`             | paste file          |
+| `ctrl` + `u` & `ctrl` + `d` | half page up & down |
+| `ctrl` + `b` & `ctrl` + `f` | full page up & down |
+|                             |                     |
 
 `copy` (default `y`) command copies the current file or selections, `cut` (default `d`) command cuts the current file or selections, `paste` (default `p`) command pastes the copied or cut files to the current directory, and `clear` (default `c`) command clears copied or cut files:
 
