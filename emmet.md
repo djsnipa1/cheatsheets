@@ -1,15 +1,13 @@
----
-title: Emmet
-category: Markup
-layout: 2017/sheet
-prism_languages: [html, css]
-updated: 2020-07-03
-intro: |
----
 # Emmet
 Emmet is a markup language for expanding CSS rules into
 HTML
 
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+---t
 ### Child: >
 
 ```css
