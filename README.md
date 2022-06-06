@@ -7,6 +7,7 @@ I also am expirementing with the [`markdown-index`](https://github.com/zeke/mark
 ___
 
 [![HitCount](http://hits.dwyl.com/djsnipa1/cheatsheets.svg)](http://hits.dwyl.com/djsnipa1/cheatsheets)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdjsnipa1%2Fcheatsheets.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdjsnipa1%2Fcheatsheets?ref=badge_shield)
 
 
 ![djsnipa1’s github stats](https://github-readme-stats.vercel.app/api?username=djsnipa1&show_icons=true&theme=gruvbox)
@@ -24,3 +25,7 @@ You can use ?hide=language1,language2 parameter to hide individual languages.
 
 [![djsnipa1’s wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=djsnipa1)](https://github.com/anuraghazra/github-readme-stats)
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdjsnipa1%2Fcheatsheets.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdjsnipa1%2Fcheatsheets?ref=badge_large)
