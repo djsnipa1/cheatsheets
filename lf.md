@@ -19,7 +19,11 @@
 |             `w`             | launch shell        |
 |                             |                     |
 
-# Configuration
+## Custom Commands from `.config/lf/lfrc`
+`a` - creates new directory
+
+
+## Configuration
 
 You can download the example configuration file and customize according to your needs.
 If you built from source you can simply copy this file from the repository:
