@@ -1,19 +1,17 @@
 # Emmet
+
 Emmet is a markup language for expanding CSS rules into
 HTML
 
-# Heading 1
+---
 
-## Heading 2
-
-### Heading 3
----t
-### Child: >
+### Child: `>`
 
 ```css
 nav>ul>li
 ```
 Expands to
+
 ```html
 <nav>
   <ul>
@@ -22,13 +20,13 @@ Expands to
 </nav>
 ```
 
-
-### Sibling: +
+### Sibling: `+`
 
 ```css
 section>p+p+p
 ```
 Expands to
+
 ```html
 <section>
   <p></p>
@@ -37,12 +35,14 @@ Expands to
 </section>
 ```
 
-### Climb Up: ^
+### Climb Up: `^`
 
 ```css
 section>header>h1^footer
 ```
 Expands to
+
+
 ```html
 <section>
   <header>
@@ -52,12 +52,13 @@ Expands to
 </section>
 ```
 
-### Grouping: ()
+### Grouping: `()`
 
 ```css
 section>(header>nav>ul>li)+footer>p
 ```
 Expands to
+
 ```html
 <section>
   <header>
@@ -73,12 +74,13 @@ Expands to
 </section>
 ```
 
-### Multiplication: \*
+### Multiplication: `\*`
 
 ```css
 ul>li*3
 ```
 Expands to
+
 ```html
 <ul>
   <li></li>
@@ -87,12 +89,13 @@ Expands to
 </ul>
 ```
 
-### IDs and Classes: . #
+### IDs and Classes: `.` & `#`
 
 ```css
 ul.menu>li.menu__item+li#id_item+li.menu__item#id_2
 ```
 Expands to
+
 ```html
 <ul class="menu">
   <li class="menu__item"></li>
@@ -101,7 +104,7 @@ Expands to
 </ul>
 ```
 
-### Numbering: $
+### Numbering: `$`
 
 ```css
 ul>li.item$*3
@@ -110,6 +113,7 @@ ul>li.item$@-*3
 ul>li.item$@3*5
 ```
 Expands to
+
 ```html
 <ul>
   <li class="item1"></li>
@@ -140,24 +144,26 @@ Expands to
 </ul>
 ```
 
-### Attributes: []
+### Attributes: `[]`
 
 ```css
 input[type="text"]
 div[data-attr="test"]
 ```
 Expands to
+
 ```html
 <input type="text" />
 <div data-attr="test"></div>
 ```
 
-### Text: {}
+### Text: `{}`
 
 ```css
 p{Lorem ipsum}
 ```
 Expands to
+
 ```html
 <p>Lorem ipsum</p>
 ```
@@ -171,6 +177,7 @@ ul>.default-list
 table>.default-table-row>.default-table-column
 ```
 Expands to
+
 ```html
 <div class="default-block"></div>
 <em><span class="default-inline"></span></em>
