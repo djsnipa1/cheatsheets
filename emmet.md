@@ -5,7 +5,7 @@ HTML
 
 ---
 
-### Child: `>`
+## Child: `>`
 
 ```css
 nav>ul>li
@@ -20,7 +20,7 @@ Expands to
 </nav>
 ```
 
-### Sibling: `+`
+## Sibling: `+`
 
 ```css
 section>p+p+p
@@ -35,7 +35,7 @@ Expands to
 </section>
 ```
 
-### Climb Up: `^`
+## Climb Up: `^`
 
 ```css
 section>header>h1^footer
@@ -52,7 +52,7 @@ Expands to
 </section>
 ```
 
-### Grouping: `()`
+## Grouping: `()`
 
 ```css
 section>(header>nav>ul>li)+footer>p
@@ -74,7 +74,7 @@ Expands to
 </section>
 ```
 
-### Multiplication: `\*`
+## Multiplication: `\*`
 
 ```css
 ul>li*3
@@ -89,7 +89,7 @@ Expands to
 </ul>
 ```
 
-### IDs and Classes: `.` & `#`
+## IDs and Classes: `.` & `#`
 
 ```css
 ul.menu>li.menu__item+li#id_item+li.menu__item#id_2
@@ -104,7 +104,7 @@ Expands to
 </ul>
 ```
 
-### Numbering: `$`
+## Numbering: `$`
 
 ```css
 ul>li.item$*3
@@ -144,7 +144,7 @@ Expands to
 </ul>
 ```
 
-### Attributes: `[]`
+## Attributes: `[]`
 
 ```css
 input[type="text"]
@@ -157,7 +157,7 @@ Expands to
 <div data-attr="test"></div>
 ```
 
-### Text: `{}`
+## Text: `{}`
 
 ```css
 p{Lorem ipsum}
@@ -168,7 +168,7 @@ Expands to
 <p>Lorem ipsum</p>
 ```
 
-### Implicit tags
+## Implicit tags
 
 ```css
 .default-block
