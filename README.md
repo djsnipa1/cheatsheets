@@ -8,6 +8,8 @@ ___
 
 [![HitCount](http://hits.dwyl.com/djsnipa1/cheatsheets.svg)](http://hits.dwyl.com/djsnipa1/cheatsheets)
 
+![](https://ripgvc.herokuapp.com/?username=djsnipa1&color=e64f00&round)
+
 
 ![djsnipa1’s github stats](https://github-readme-stats.vercel.app/api?username=djsnipa1&show_icons=true&theme=gruvbox)
 
