@@ -6,6 +6,14 @@
 :%y+
 ```
 
+## Search and replace text
+
+The `%` means to "search the whole document. The `g` means **global** so it will replace all the found words all at once.
+
+```vim
+:%s/foo/bar/g
+```
+
 ## repeat characters to a specific column 
 
 In the following example, `x` is whatever characters you want to repeat.
