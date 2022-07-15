@@ -1,5 +1,11 @@
 # Nix
 
+## Get size of derivation or `nixpkgs`
+
+```bash
+nix-store -q —requisites `nix-build —no-out-link ‘<nixpkgs>’ -A vim` | sort -uf | xargs du -ch | tail -1
+```
+
 ## Nix Package Manager
 
 ### Multiuser Installation
@@ -22,9 +28,6 @@ Edit either `~/.config/nix/nix.conf` or `/etc/nix/nix.conf` and add:
 ```
 experimental-features = nix-command flakes
 ```
-
-
-
 
 ### Standalone installation
 
