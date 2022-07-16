@@ -222,5 +222,45 @@ Use 2 <kbd>g</kbd> <kbd>CTRL</kbd> + <kbd>A</kbd> to use a step count of 2.
 
 ![https://i.stack.imgur.com/CbUTo.gif](https://i.stack.imgur.com/CbUTo.gif)
 
+## How to Visualize Tabs in Vim
 
+(This is an excerpt taken from the post: [Tabs & Spaces in Vim: How to Make Conscious Use of Both](https://alldrops.info/posts/vim-drops/2021-07-08_tabs-and-spaces-in-vim/))
+
+It will be presented two ways to visualize Tabs in Vim.
+
+### [](https://dev.to/rossijonas/how-to-visualize-tabs-in-vim-lh4#searching-for-the-tab-character)Searching for the Tab Character
+
+A quick way to visualize whether there is a Tab character is by searching for it using Vim’s `search-commands`:
+
+-   In NORMAL mode, type `/\t` and hit `<Enter>`. It will search for the Tab character (`\t`) and highlight the results.
+
+[![gif01](https://res.cloudinary.com/practicaldev/image/fetch/s--3LONV7mh--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yg2khcud0wvl0nc7h3bj.gif)](https://res.cloudinary.com/practicaldev/image/fetch/s--3LONV7mh--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yg2khcud0wvl0nc7h3bj.gif)
+
+Although it may be good for a quick check, if you need persistent Tabs visibility plus the ability to use the `search-commands` for other purposes, you might need another solution.
+
+### [](https://dev.to/rossijonas/how-to-visualize-tabs-in-vim-lh4#activating-raw-list-endraw-mode)Activating `list` Mode
+
+Vim’s `list` mode displays on screen unprintable characters (`<Tab>`, `EOF`, `EOL`, etc…) with strings defined by the `listchars` option.
+
+By default, it will display `^I` for a Tab character but this default representation breaks screen alignment so, the suggestion is to set a string representation to be used for the Tab character:
+
+-   In `NORMAL` mode, type `:set listchars=tab:▷▷⋮` or add `set listchars=tab:▷▷⋮` to your `.vimrc` file.
+
+-   Toggle `list` mode by typing `:set invlist` in `NORMAL` mode.
+
+The command above defines the strings that Vim will display (`▷▷⋮`) for a Tab character. Vim’s behavior is to repeat or omit the second character (`▷`), which means:
+
+A Tab character on a file that the indentation is set to **occupy two screen spaces**, will display `▷⋮`.
+
+A Tab character on a file that the indentation is set to **occupy four screen spaces**, will display `▷▷▷⋮`.
+
+[![gif02](https://res.cloudinary.com/practicaldev/image/fetch/s--vrls9tuw--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/55w50sxhces8p0jn4at8.gif)](https://res.cloudinary.com/practicaldev/image/fetch/s--vrls9tuw--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/55w50sxhces8p0jn4at8.gif)
+
+#### [](https://dev.to/rossijonas/how-to-visualize-tabs-in-vim-lh4#extra-create-a-mapping-to-toggle-list-mode-quickly)Extra: Create a Mapping to Toggle list Mode Quickly
+
+Add the following line to your `.vimrc` file:  
+
+```
+noremap <Leader><Tab><Tab> :set invlist<CR>
+```
 
