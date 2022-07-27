@@ -32,3 +32,17 @@ cat /dev/clipboard
 cat /dev/clipboard > file.txt
 ```
 
+## Using main `apk` repositories instead of `ish` repos
+
+```bash
+echo https://dl-cdn.alpinelinux.org/alpine/edge/main > /etc/apk/repositories
+echo https://dl-cdn.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories
+apk update
+apk upgrade
+```
+Now you can add current version of `neovim` for example:
+
+```bash
+apk add neovim
+```
+
