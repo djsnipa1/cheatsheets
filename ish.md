@@ -46,3 +46,9 @@ Now you can add current version of `neovim` for example:
 apk add neovim
 ```
 
+## Changing Default Shell
+
+```bash
+apk add shadow
+```
+Now you can run `chsh` and type in the default shell 
