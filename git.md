@@ -1,5 +1,11 @@
 # Git
 
+## get a file from another branch
+
+```bash
+git checkout branch-name path/to/file.ext
+```
+
 ## `git status` shows modified files because of CRLF and LF 
 
 I had an issue where hundreds of line endings were modified by some program and git diff listed all source files as changed. After fixing the line endings, git status still listed the files as modified.
