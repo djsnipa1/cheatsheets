@@ -4,7 +4,7 @@
 
 ![Updog](https://sc0tfree.squarespace.com/s/updog.png)
 
-<img src=“https://sc0tfree.squarespace.com/s/updog.png” width=85px alt=“updog”/>
+<img src=“https://sc0tfree.squarespace.com/s/updog.png” width=85px alt=“updog”>
 
 Updog is a replacement for Python’s `SimpleHTTPServer`. 
 It allows uploading and downloading via HTTP/S, 
