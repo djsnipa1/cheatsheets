@@ -1,6 +1,19 @@
 FFMPEG
 ======
 
+## Convert AVI to MP4
+
+**no Re-encode**: Only changing the container
+
+```bash
+ffmpeg -i input_filename.avi -c:v copy -c:a copy -y output_filename.mp4
+```
+In this commandline, you are providing
+
+- the AVI video as input
+- specifying the name of the output MP4 file,
+- instructing FFmpeg to directly copy the audio and video (seen here: ``-c:v copy -c:a copy``) from the AVI container format to the MP4 container format.
+
 Convert Image Sequence to Video
 -------------------------------
 
