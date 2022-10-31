@@ -11,6 +11,11 @@ fc-list
 ```shell
 yay -Syyu
 ```
+**update single package**
+
+```shell
+yay -S <package name>
+``
 
 ## `pacman`
 
@@ -18,9 +23,18 @@ yay -Syyu
 
 ```shell
 pacman -S <package name>
-```
+``
+**update single package**
 
-**update all installed packages**
+```shell
+pacman -S <package name>
+``
+
+***update all installed packages**
+
+```shell
+pacman -Syu
+`*update all installed packages**
 
 ```shell
 pacman -Syu
