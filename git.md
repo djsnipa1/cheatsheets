@@ -6,6 +6,31 @@
 git checkout branch-name path/to/file.ext
 ```
 
+## Replace `master` branch with another branch
+
+_Taken from [stackoverflow](https://stackoverflow.com/a/2862938)_
+
+You should be able to use the “ours” merge strategy to overwrite `master` with `seotweaks` like this:
+
+```bash
+git checkout master
+git pull
+git checkout seotweaks
+git merge -s ours master
+git checkout master
+git merge seotweaks
+```
+
+The first two steps are a useful precaution to ensure your local copy of `master` is up-to-date. The result should be that your master is now essentially `seotweaks`.
+
+(`-s ours` is short for `--strategy=ours`)
+
+From the docs about the ‘ours’ strategy:
+
+> This resolves any number of heads, but the resulting tree of the merge is always that of the current branch head, effectively ignoring all changes from all other branches. It is meant to be used to supersede old development history of side branches. Note that this is different from the `-Xours` option to the recursive merge strategy.
+
+**Update from comments:** If you get fatal: refusing to merge unrelated histories, then change the second line to this: `git merge --allow-unrelated-histories -s ours master`
+
 ## `git status` shows modified files because of CRLF and LF 
 
 I had an issue where hundreds of line endings were modified by some program and git diff listed all source files as changed. After fixing the line endings, git status still listed the files as modified.
