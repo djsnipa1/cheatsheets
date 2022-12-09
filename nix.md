@@ -1,5 +1,15 @@
 # Nix
 
+## Get sha256 of URL or URL tarball
+
+```bash
+nix-prefetch-url https://github.com/NixOS/nixpkgs/archive/fksjflskjfsdlfkjslksjfsdlfkjdsj
+```
+
+```bash
+nix-prefetch-url --unpack https://github.com/NixOS/nixpkgs/archive/fksjflskjfsdlfkjslksjflfk.tar.gz
+```
+
 ## Get size of derivation or `nixpkgs`
 
 ```bash
