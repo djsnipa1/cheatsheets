@@ -72,6 +72,12 @@ nix-prefetch-url --unpack https://github.com/NixOS/nixpkgs/archive/fksjflskjfsdl
 nix-store -q —requisites `nix-build —no-out-link ‘<nixpkgs>’ -A vim` | sort -uf | xargs du -ch | tail -1
 ```
 
+## Fix `nix store` issues
+
+```bash
+sudo nix-store —repair —verify —check-contents
+```
+
 ## Nix Package Manager
 
 ### Multiuser Installation
