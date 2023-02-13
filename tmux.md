@@ -1,72 +1,109 @@
-# tmux shortcuts & cheatsheet
+# `tmux` shortcuts & cheatsheet
+
+## `tmux` config file
+
+Located here: `~/.tmux.conf`
+
+`tmux show -g` will show you the current settings. You can write that to the config file with
+
+```bash
+tmux show -g > ~/.tmux.conf
+```
+
+By modifying the previous command, you can prepend each line with the needed `set-option -g` 
+
+__FINAL COMMAND:__
+
+```bash
+tmux show -g | sed 's/^/set-option -g /' > ~/.tmux.conf
+```
+---
+
+## `tmux` commands
 
 start new:
 
-    tmux
+```bash
+tmux
+```
 
 start new with session name:
 
-    tmux new -s myname
+```bash
+tmux new -s myname
+```
 
 attach:
 
-    tmux a  #  (or at, or attach)
+```bash
+tmux a  #  (or at, or attach)
+```
 
 attach to named:
 
-    tmux a -t myname
+```bash
+tmux a -t myname
+```
 
 list sessions:
 
-    tmux ls
+```bash
+tmux ls
+```
 
-<a name="killSessions"></a>kill session:
+kill sessions:
 
-    tmux kill-session -t myname
+```bash
+tmux kill-session -t myname
+```
 
-<a name="killAllSessions"></a>Kill all the tmux sessions:
+kill all sessions:
 
-    tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill
+```bash
+tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill
+```
+---
 
-In tmux, hit the prefix `ctrl+b` (my modified prefix is ctrl+a) and then:
+In `tmux`, hit the prefix <kbd>ctrl</kbd> + <kbd>b</kbd> and then:
 
 ## Sessions
 
     :new<CR>  new session
-    s  list sessions
-    $  name session
+    <kbd>s</kbd>  list sessions
+    <kbd>$</kbd>  name session
 
 ## Windows (tabs)
 
-    c  create window
-    w  list windows
-    n  next window
-    p  previous window
-    f  find window
-    ,  name window
-    &  kill window
+    <kbd>c</kbd>  create window
+    <kbd>w</kbd>  list windows
+    <kbd>n</kbd>  next window
+    <kbd>p</kbd>  previous window
+    <kbd>f</kbd>  find window
+    <kbd>,</kbd>  name window
+    <kbd>&</kbd>  kill window
 
 ## Panes (splits) 
 
-    %  vertical split
-    "  horizontal split
-    
-    o  swap panes
-    q  show pane numbers
-    x  kill pane
-    +  break pane into window (e.g. to select text by mouse to copy)
-    -  restore pane from window
-    ⍽  space - toggle between layouts
-    <prefix> q (Show pane numbers, when the numbers show up type the key to goto that pane)
-    <prefix> { (Move the current pane left)
-    <prefix> } (Move the current pane right)
-    <prefix> z toggle pane zoom
+    <kbd>%</kbd>  vertical split
+    <kbd>"</kbd>  horizontal split
 
-## <a name="syncPanes"></a>Sync Panes 
+    
+    <kbd>o</kbd>  swap panes
+    <kbd>q</kbd>  show pane numbers
+    <kbd>x</kbd>  kill pane
+    <kbd>+</kbd>  break pane into window (e.g. to select text by mouse to copy)
+    <kbd>-</kbd>  restore pane from window
+    <kbd>⍽</kbd>  space - toggle between layouts
+    <prefix> <kbd>q</kbd> (Show pane numbers, when the numbers show up type the key to goto that pane)
+    <prefix> <kbd>{</kbd> (Move the current pane left)
+    <prefix> <kbd>}</kbd> (Move the current pane right)
+    <prefix> <kbd>z</kbd> toggle pane zoom
+
+## Sync Panes 
 
 You can do this by switching to the appropriate window, typing your Tmux prefix (commonly Ctrl-B or Ctrl-A) and then a colon to bring up a Tmux command line, and typing:
 
-```
+```bash
 :setw synchronize-panes
 ```
 
@@ -93,13 +130,15 @@ You can also resize panes if you don’t like the layout defaults. I personally 
 
 Pressing PREFIX [ places us in Copy mode. We can then use our movement keys to move our cursor around the screen. By default, the arrow keys work. we set our configuration file to use Vim keys for moving between windows and resizing panes so we wouldn’t have to take our hands off the home row. tmux has a vi mode for working with the buffer as well. To enable it, add this line to .tmux.conf:
 
-    setw -g mode-keys vi
+```bash
+setw -g mode-keys vi
+```
 
-With this option set, we can use h, j, k, and l to move around our buffer.
+With this option set, we can use <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, and <kbd>l</kbd> to move around our buffer.
 
-To get out of Copy mode, we just press the ENTER key. Moving around one character at a time isn’t very efficient. Since we enabled vi mode, we can also use some other visible shortcuts to move around the buffer.
+To get out of Copy mode, we just press the <kbd>ENTER</kbd> key. Moving around one character at a time isn’t very efficient. Since we enabled vi mode, we can also use some other visible shortcuts to move around the buffer.
 
-For example, we can use "w" to jump to the next word and "b" to jump back one word. And we can use "f", followed by any character, to jump to that character on the same line, and "F" to jump backwards on the line.
+For example, we can use <kbd>w</kbd> to jump to the next word and <kbd>b</kbd> to jump back one word. And we can use <kbd>f</kbd>, followed by any character, to jump to that character on the same line, and <kbd>F</kbd> to jump backwards on the line.
 
        Function                vi             emacs
        Back to indentation     ^              M-m
