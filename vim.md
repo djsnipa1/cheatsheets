@@ -14,6 +14,24 @@ The `%` means to "search the whole document. The `g` means **global** so it will
 :%s/foo/bar/g
 ```
 
+### Adding Newline from Search and Replace
+
+> This step might not need to be done. I didn't have to do it...
+
+First, set your Vi(m) session to allow pattern matching with special characters (i.e.: newline). It's probably worth putting this line in your `.vimrc` file:
+
+```vim
+:set magic
+```
+
+Next, do:
+
+```vim
+:s/,/,^M/g
+```
+
+To get the `^M` character, type <kbd>Ctrl</kbd> + <kbd>V</kbd> and hit <kbd>Enter</kbd>. Under Windows, do <kbd>Ctrl</kbd> + <kbd>Q</kbd>, <kbd>Enter</kbd>. 
+
 ## repeat characters to a specific column 
 
 In the following example, `x` is whatever characters you want to repeat.
