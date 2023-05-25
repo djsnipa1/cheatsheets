@@ -1,4 +1,4 @@
-# Web Browser Docker
+# Terminal Web Browser Docker
 
 [Forking Chrome to render in a terminal | Hacker News](https://news.ycombinator.com/item?id=34547259)
 
