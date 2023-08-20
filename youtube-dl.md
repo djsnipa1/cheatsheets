@@ -8,6 +8,14 @@
 -format "(bestvideo[vcodec^=av01][height>=720][fps>30]/bestvideo[vcodec=vp9.2][height>=720][fps>30]/bestvideo[vcodec=vp9][height>=720][fps>30]/bestvideo[vcodec^=av01][height>=720]/bestvideo[vcodec=vp9.2][height>=720]/bestvideo[vcodec=vp9][height>=720]/bestvideo[height>=720]/bestvideo)+(bestaudio[acodec=opus]/bestaudio)/best" -force-ipv4 --no-continue --download-archive archive.log --add-metadata --write-description --write-info-json --write-annotations --write-thumbnail --embed-thumbnail --sub-format "srt" --embed-subs --write-auto-sub
 ```
 
+### Save screenshot of specific time
+
+Just replace the **url** and the **time (2:22)**
+
+```shell
+ffmpeg -ss 2:22 -i $(yt-dlp -f 137 --get-url "https://youtu.be/sL6SgDEHH00") -vframes 1 -q:v 2 out.png
+```
+
 ### Download Best Quality
 
 ```shell
