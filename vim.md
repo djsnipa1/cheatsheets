@@ -1,5 +1,10 @@
 # VIM
 
+## jump to the blank lines in a file. Useful for large files.
+
+```vim
+:g/^$/normal! j`
+```
 ## Yank entire file to clipboard
 
 ```vim
