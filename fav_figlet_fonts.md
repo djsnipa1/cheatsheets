@@ -17,26 +17,36 @@
 ▌ ▛▌▀▌▛▌
 ▙▖▌▌█▌▙▌
 ```
-* Bloody
-* Chunky
-* Colossal
-* Cricket
-* Elite
-* Gradient
-* henry3d
-* Slant
-* smslant
-* larry3d
-* smpoison
-* Rectangles
-* sblood
-* Shimrod
-* Short
-* smisome1
-* Soft
-* Sub-Zero
-* swampland
-* Whimsy
+Bloody
+Chunky
+Colossal
+Cricket
+Elite
+Gradient
+henry3d
+Slant
+smslant
+larry3d
+smpoison
+Rectangles
+sblood
+Shimrod
+Short
+smisome1
+Soft
+Sub-Zero
+swampland
+Whimsy
+
+Thin
+lineblock
+smkeyboard
+Spliff
+s-relief
+Test1
+Wow
+1Row
+Cards
 
 ##### Tiles
 ###### Tiles 

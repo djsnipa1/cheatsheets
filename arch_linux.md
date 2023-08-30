@@ -1,5 +1,17 @@
 # Arch Linux
 
+## adjusting screen brightness
+
+brightness up
+```
+sudo brillo -A 10
+```
+
+brightness down
+```
+sudo brillo -U 10
+```
+
 ## check installed fonts
 ```shell
 fc-list
