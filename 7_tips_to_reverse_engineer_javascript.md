@@ -231,21 +231,21 @@ Similarly to `__awaiter` and `__generator`, also `__extends` is a [TypeScript he
 
 However, when you see that:
 
-1) The constructor definition is nested inside another function with some arg<br>
+1. The constructor definition is nested inside another function with some arg<br>
 
 ```
 API = function (e // This is the parent class) { function API(t, r, i, n, o, a) { ... } ...
 }
 ```
 
-2) That that unknown arg is called inside the constructor<br>
+1. That that unknown arg is called inside the constructor<br>
 
 ```
 API = function (e // This is the parent class) { function API(t, r, i, n, o, a) { var s = e.call(this, t, r, n, a) || this; // This is same as `super(t, r, n, a)` ... } ...
 }
 ```
 
-3) That that same unknown arg is also passed to some function along with out class<br>
+1. That that same unknown arg is also passed to some function along with out class<br>
 
 ```
 return __extends(API, e) // This passes the prototype of `e` to `API`
